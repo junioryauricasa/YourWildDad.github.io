@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;;
+  }
+  div {
+    border: 1px solid #999;
+    padding: 20px;
+    position: relative;
+  }
+  .container {
+    background-color: #eee;
+    *zoom: 1;
+  }
+  .container:after, .container:before {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .container div {
+    background-color: #fff;
+    float: left;
+  }
+  .container > .left {
+    margin-right: 20px;
+    width: 200px;
+    text-align: right;
+  }
+  .container > .center {
+    margin-right: 20px;
+    width: calc(100% - 360px);
+  }
+  .container > .right {
+    width: 120px;
+  }
+  .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  .icon:last-child {
+    margin-bottom: 0;
+  }
+</style>
+<body>
+<div class="container">
+  <div class="left">
+    <div class="icon"></div>
+    小升初
+  </div>
+  <div class="center">
+    <h3>小升初复读班春季火热招生！</h3>
+    <p>还在为你的孩子升不了好初中发愁吗？还在为你的孩子升不了好初中发愁吗？还在为你的孩子升不了好初中发愁吗？还在为你的孩子升不了好初中发愁吗？还在为你的孩子升不了好初中发愁吗？还在为你的孩子升不了好初中发愁吗？还在为你的孩子升不了好初中发愁吗？</p>
+    <p>马上参加小升初复读班，为孩子的前途保驾护航！</p>
+    <p>30年教育经验的老司机带你孩子学装逼，24小时无休的军事化管理，每天5:00 ~ 24:00的高强度学习计划，保证孩子的每一分钟都用在学习上！</p>
+    <p>食堂花重金聘请注明地沟油油条师傅，祖传路边三轮油条已经有120年历史！保证孩子的营养充足！</p>
+    <p>清理了学校周边的所有网吧，方圆10公里内的网吧就算钉子户也被强行收买卸载英雄联盟，让你的孩子一心一意都用在学习上！</p>
+    <p>升初中是人生大事，如果你还在为孩子升不了好初中发愁，那就赶快拿起电话，报名吧！</p>
+  </div>
+  <div class="right">
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+  </div>
+</div>
+</body>
+</html>
