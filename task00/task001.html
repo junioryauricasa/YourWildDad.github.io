@@ -38,7 +38,7 @@
     <li>排名3</li>
 </ol>
 下面是一个表格<br>
-<table>
+<table border="1">
     <tbody>
     <tr>
         <td>表头</td>
@@ -73,31 +73,30 @@
     <tr>
 
         <td>总计</td>
-        <td>1000</td>
-        44
+        <td colspan="2">1000</td>
     </tr>
     </tbody>
 </table>
 <h2>这里以后是一个侧栏，这是侧栏的标题<br>侧栏注册窗口标题</h2>
-<p>
-    请输入邮箱地址：<input type="text" value="这是一个文本输入框"><br>
+<form action="/" method="post">
+    请输入邮箱地址：<input type="email" value="这是一个文本输入框" name="email"><br>
     邮箱地址请按要求格式输入<br>
-    请输入密码：<input type="text" value="这是一个文本输入框">
-    请重复输入密码：<input type="text" value="这是一个文本输入框"><br>
+    请输入密码：<input type="password" value="这是一个文本输入框">
+    请重复输入密码：<input type="password" value="这是一个文本输入框" name="pwd"><br>
     密码请为6—16位英文字母<br>
-    性别：<input type="radio" value="男">男 <input type="radio" value="女">女
-    城市：<select name="城市" size="4">
+    性别：<input type="radio" value="男" name="sex">男 <input type="radio" value="女" name="sex">女
+    城市：<select name="city" size="1">
     <option value="1" selected="selected">北京</option>
     <option value="2">上海</option>
     <option value="3">广州</option>
     <option value="4">深圳</option>
 </select>
-    爱好：<input type="checkbox" value="运动">运动 <input type="checkbox" value="艺术">艺术
-    <input type="checkbox" value="科学">科学
-    个人描述：<textarea rows="2" cols="24">这是一个多行输入文本，输入您的个人描述</textarea>
+    爱好：<input type="checkbox" value="运动" name="hobby">运动 <input type="checkbox" value="艺术" name="hobby">艺术
+    <input type="checkbox" value="科学" name="hobby">科学
+    个人描述：<textarea rows="2" cols="24" name="detial">这是一个多行输入文本，输入您的个人描述</textarea>
     <input type="submit" value="确认提交">
 
 
-</p>
+</form>
 </body>
 </html>
