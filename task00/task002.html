@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>百度前端技术学院第一批任务task02</title>
+  <style>
+    html, body {
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      width: 100%;
+      margin: 0;
+    }
+    body {
+      padding: 6.5em 1.5em;
+      background-color: #ddd;
+      position: relative;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 300;
+      margin: 0;
+    }
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    header {
+      line-height: 5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 5em;
+      padding: 0 2em;
+      color: #fafafa;
+      background-color: #111;
+    }
+    footer {
+      line-height: 5rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 5rem;
+      padding: 0 2em;
+      color: #fafafa;
+      background-color: #111;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    header > .title {
+      float: left;
+    }
+    header > .nav, .title > h1 {
+      float: right;
+    }
+    .title > .logo {
+      height: 4em;
+    }
+    .nav > ul {
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+    .nav li {
+      float: left;
+      margin-left: 2em;
+    }
+    article {
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 1em 1.5em;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background-color: #fafafa;
+      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
+    h2.title {
+      line-height: 3rem;
+      font-weight: bold;
+    }
+    article > .description {
+      line-height: 3rem;
+      font-weight: bold;
+      color: #666;
+    }
+    article > .author {
+      color: #777;
+      font-size: .9em;
+      line-height: 3rem;
+    }
+    article > p {
+      line-height: 1.8em;
+      text-indent: 2em;
+      margin: 0;
+    }
+    article ul {
+      -webkit-padding-start: 2em;
+      -moz-padding-start: 2em;
+      padding-left: 2em;
+      list-style: none;
+    }
+    article li {
+      line-height: 2rem;;
+    }
+    article img {
+      margin: 1em 0;
+    }
+    article table {
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+    article table > thead {
+      background-color: #222;
+      color: #fff;
+    }
+    article table > caption {
+      text-align: left;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 1.1em;
+    }
+    article table td {
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    article table td:last-child {
+      border-right: none;
+    }
+    article table > tfoot {
+      background-color: #ddd;
+      font-weight: 600;
+    }
+    aside {
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 1em 1.5em;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background-color: #fafafa;
+      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
+    aside table {
+      width: 100%;
+    }
+    aside table td:first-child {
+      text-align: right;
+      vertical-align: top;
+    }
+    aside table td:last-child {
+      text-align: left;
+      vertical-align: top;
+    }
+    aside > .title {
+      border-left: .3em solid #ddd;
+      padding: 0 1em;
+    }
+    aside .help-info {
+      display: inline-block;
+      line-height: 2em;
+      margin-bottom: 1em;
+      color: #aaa;
+    }
+    aside .btn-submit {
+      width: 100%;
+      height: 2em;
+      font-size: 1.5em;
+      background-color: #56A2ED;
+      color: #fff;
+      border: 1px solid #56A2ED;
+      -webkit-border-radius: .5em;
+      -moz-border-radius: .5em;
+      border-radius: .2em;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="title">
+    <img src="images/logo_white.png" alt="百度" class="logo">
+    <h1>网站的一级标题</h1>
+  </div>
+  <div class="nav">
+    <ul>
+      <li><a href="#post1">导航链接一</a></li>
+      <li><a href="#post2">导航链接二</a></li>
+      <li><a href="#post3">导航链接三</a></li>
+      <li><a href="#post4">导航链接四</a></li>
+    </ul>
+  </div>
+</header>
+<article id="post1">
+  <h2 class="title">文章的一级标题</h2>
+  <h3 class="description">文章的二级标题</h3>
+  <span class="author">文章作者
+    <time>文章发表时间</time>
+  </span>
+  <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+    <a href="http://ife.baidu.com">这里有一个连接连接到http://ife.baidu.com</a>，这是一个很长很长的段落，<b>这里有粗体字</b>，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了</p>
+  <img src="images/fanxiaoxuan.jpg">
+  <p>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+    <a href="http://ife.baidu.com">这里有一个连接连接到http://ife.baidu.com</a>，这是一个很长很长的段落，<b>这里有粗体字</b>，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+  </p>
+</article>
+<article id="post2">
+  <h2 class="title">另一篇文章一级标题</h2>
+  <h3 class="description">文章二级标题</h3>
+  <span class="author">文章作者
+    <time>文章发表时间</time>
+  </span>
+  <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+    <a href="http://ife.baidu.com">这里有一个连接连接到http://ife.baidu.com</a>，这是一个很长很长的段落，<b>这里有粗体字</b>，这是一个很长很长的段落，换行了<br/>
+    这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+  </p>
+  <img src="images/fanxiaoxuan.jpg">
+  <ul>
+    <li>列表项目一</li>
+    <li>列表项目二</li>
+    <li>列表项目三</li>
+  </ul>
+</article>
+<article id="post3">
+  <h2 class="title">图片</h2>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+  <p>好看的图片<br/>
+    <img src="images/fanxiaoxuan.jpg"/>
+  </p>
+</article>
+<article id="post4">
+  <h2 class="title">最后一篇文章一级标题</h2>
+  <h3 class="description">文章二级标题</h3>
+  <span class="author">文章作者
+    <time>文章发表时间</time>
+  </span>
+  <ol>
+    <li>排名1</li>
+    <li>排名2</li>
+    <li>排名3</li>
+  </ol>
+  <table cellspacing="0">
+    <caption>下面是一个表格,给表格加了一个border="1"好让你看出是一个表格</caption>
+    <thead>
+    <tr>
+      <td>表头</td>
+      <td>表头</td>
+      <td>表头</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>表内单元格</td>
+      <td>表内单元格</td>
+      <td><a href="">操作</a></td>
+    </tr>
+    <tr>
+      <td>表内单元格</td>
+      <td>表内单元格</td>
+      <td><a href="">操作</a></td>
+    </tr>
+    <tr>
+      <td>表内单元格</td>
+      <td>表内单元格</td>
+      <td><a href="">操作</a></td>
+    </tr>
+    <tr>
+      <td>表内单元格</td>
+      <td>表内单元格</td>
+      <td><a href="">操作</a></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td>总计</td>
+      <td colspan="2">1000</td>
+    </tr>
+    </tfoot>
+  </table>
+</article>
+<aside>
+  <h2 class="title">这里以后是一个侧栏，这是侧栏的标题</h2>
+  <form action="/" method="post">
+    <table>
+      <tbody>
+      <tr>
+        <td><label for="email">请输入邮箱地址：</label></td>
+        <td><input type="email" placeholder="这是一个文本输入框" name="email" id="email"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><span class="help-info">邮箱地址请按要求格式输入</span></td>
+      </tr>
+      <tr>
+        <td><label for="pwd">请输入密码：</label></td>
+        <td><input type="password" placeholder="这是一个文本输入框" id="pwd"></td>
+      </tr>
+      <tr>
+        <td><label for="pwdagein">请重复输入密码：</label></td>
+        <td><input type="password" placeholder="这是一个文本输入框" name="pwd" id="pwdagein"><br></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><span class="help-info">密码请为6—16位英文字母</span></td>
+      </tr>
+      <tr>
+        <td><span>性别</span></td>
+        <td>
+          <input type="radio" value="男" name="sex" id="man"> <label for="man">男</label>
+          <input type="radio" value="女" name="sex" id="woman"> <label for="woman">女</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="city">城市：</label></td>
+        <td>
+          <input id="city" list="city-list"/>
+          <datalist name="city" size="1" id="city-list">
+            <option value="北京" selected="selected">北京</option>
+            <option value="上海">上海</option>
+            <option value="广州">广州</option>
+            <option value="深圳">深圳</option>
+          </datalist>
+        </td>
+      </tr>
+      <tr>
+        <td><span>爱好：</span></td>
+        <td>
+          <input type="checkbox" value="运动" name="hobby" id="sport">
+          <label for="sport">运动</label>
+          <input type="checkbox" value="艺术" name="hobby" id="art">
+          <label for="art">艺术</label>
+          <input type="checkbox" value="科学" name="hobby" id="science">
+          <label for="science">科学</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="detail">个人描述：</label></td>
+        <td><textarea name="detail" id="detail" style="width:100%;height:10em;">这是一个多行输入文本，输入您的个人描述</textarea></td>
+      </tr>
+      </tbody>
+    </table>
+    <button type="submit" class="btn-submit">提交</button>
+  </form>
+</aside>
+<footer>
+  <span>版权所有&copy;</span>
+</footer>
+</body>
+</html>
