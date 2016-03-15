@@ -7,10 +7,9 @@
     .clearfix {
       *zoom: 1;
     }
-    .clearfix:before,
-    .clearfix:after {
-      content: "";
+    .clearfix:before, .clearfix:after {
       display: table;
+      content: '';
     }
     .clearfix:after {
       clear: both;
@@ -22,9 +21,9 @@
       margin: 0;
     }
     body {
+      position: relative;
       padding: 6.5em 1.5em;
       background-color: #ddd;
-      position: relative;
     }
     ul {
       margin: 0;
@@ -49,8 +48,8 @@
       line-height: 5rem;
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
+      left: 0;
       width: 100%;
       height: 5em;
       padding: 0 2em;
@@ -58,18 +57,18 @@
       background-color: #111;
     }
     footer {
+      font-size: 1.5em;
       line-height: 5rem;
       position: absolute;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
       width: 100%;
       height: 5rem;
       padding: 0 2em;
+      text-align: center;
       color: #fafafa;
       background-color: #111;
-      text-align: center;
-      font-size: 1.5em;
     }
     header > .title {
       float: left;
@@ -102,32 +101,32 @@
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
     h2.title {
-      line-height: 3rem;
       font-weight: bold;
+      line-height: 3rem;
     }
     article > .description {
-      line-height: 3rem;
       font-weight: bold;
+      line-height: 3rem;
       color: #666;
     }
     article > .author {
-      color: #777;
       font-size: .9em;
       line-height: 3rem;
+      color: #777;
     }
     article > p {
       line-height: 1.8em;
-      text-indent: 2em;
       margin: 0;
+      text-indent: 2em;
     }
     article ul {
-      -webkit-padding-start: 2em;
-      -moz-padding-start: 2em;
       padding-left: 2em;
       list-style: none;
+      -webkit-padding-start: 2em;
+      -moz-padding-start: 2em;
     }
     article li {
-      line-height: 2rem;;
+      line-height: 2rem;
     }
     article .images {
       width: 80%;
@@ -136,10 +135,10 @@
       border: 1px solid #ddd;
     }
     .images > .image {
-      width: 25%;
-      text-align: center;
-      padding: .01em;
       float: left;
+      width: 25%;
+      padding: .05em;
+      text-align: center;
     }
     .image > img {
       width: 100%;
@@ -149,13 +148,13 @@
       border: 1px solid #ddd;
     }
     article table > thead {
-      background-color: #222;
       color: #fff;
+      background-color: #222;
     }
     article table > caption {
-      text-align: left;
-      font-weight: 500;
       font-size: 1.1em;
+      font-weight: 500;
+      text-align: left;
     }
     article table td {
       border-right: 1px solid #ddd;
@@ -165,8 +164,8 @@
       border-right: none;
     }
     article table > tfoot {
-      background-color: #ddd;
       font-weight: 600;
+      background-color: #ddd;
     }
     aside {
       width: 100%;
@@ -190,25 +189,25 @@
       vertical-align: top;
     }
     aside > .title {
-      border-left: .3em solid #ddd;
       padding: 0 1em;
+      border-left: .3em solid #ddd;
     }
     aside .help-info {
-      display: inline-block;
       line-height: 2em;
+      display: inline-block;
       margin-bottom: 1em;
       color: #aaa;
     }
     aside .btn-submit {
+      font-size: 1.5em;
       width: 100%;
       height: 2em;
-      font-size: 1.5em;
-      background-color: #56A2ED;
       color: #fff;
-      border: 1px solid #56A2ED;
+      border: 1px solid #56a2ed;
       -webkit-border-radius: .5em;
       -moz-border-radius: .5em;
       border-radius: .2em;
+      background-color: #56a2ed;
     }
   </style>
 </head>
