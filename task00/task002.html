@@ -63,21 +63,21 @@
     header > .title {
       float: left;
     }
-    header > .nav, .title > h1 {
+    header > nav, .title > h1 {
       float: right;
     }
     .title > .logo {
       height: 4em;
     }
-    .nav > ul {
+    nav > ul {
       font-size: 1.1em;
       font-weight: 400;
     }
-    .nav li {
+    nav li {
       float: left;
       margin-left: 2em;
     }
-    .nav li > a {
+    nav li > a {
       color: inherit;
     }
     article {
@@ -192,6 +192,7 @@
       -moz-border-radius: .5em;
       border-radius: .2em;
       background-color: #56a2ed;
+      margin-top: 1em;
     }
   </style>
 </head>
@@ -201,14 +202,14 @@
     <img src="images/logo_white.png" alt="百度" class="logo">
     <h1>网站的一级标题</h1>
   </div>
-  <div class="nav">
+  <nav>
     <ul>
       <li><a href="#post1">导航链接一</a></li>
       <li><a href="#post2">导航链接二</a></li>
       <li><a href="#post3">导航链接三</a></li>
       <li><a href="#post4">导航链接四</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
 <article id="post1">
   <h2 class="title">文章的一级标题</h2>
