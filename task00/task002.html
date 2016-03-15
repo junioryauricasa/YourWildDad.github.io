@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>百度前端技术学院第一批任务task02</title>
-  <style>
+  <style rel="stylesheet" type="text/css">
+    .clearfix {
+      *zoom: 1;
+    }
+    .clearfix:before,
+    .clearfix:after {
+      content: "";
+      display: table;
+    }
+    .clearfix:after {
+      clear: both;
+    }
     html, body {
       font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 14px;
@@ -21,11 +32,13 @@
     }
     a {
       text-decoration: none;
-      color: inherit;
     }
     h1, h2, h3, h4, h5, h6 {
       font-weight: 300;
       margin: 0;
+    }
+    img {
+      max-width: 100%;
     }
     * {
       -webkit-box-sizing: border-box;
@@ -75,6 +88,9 @@
       float: left;
       margin-left: 2em;
     }
+    .nav li > a {
+      color: inherit;
+    }
     article {
       width: 100%;
       margin-bottom: 1em;
@@ -113,8 +129,18 @@
     article li {
       line-height: 2rem;;
     }
-    article img {
-      margin: 1em 0;
+    article .images {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .images > .image {
+      width: 33.333333333333333333333%;
+      text-align: center;
+      padding: 1em;
+      float: left;
+    }
+    .image > img {
+      width: 100%;
     }
     article table {
       width: 100%;
@@ -126,7 +152,6 @@
     }
     article table > caption {
       text-align: left;
-      white-space: nowrap;
       font-weight: 500;
       font-size: 1.1em;
     }
@@ -241,30 +266,52 @@
 </article>
 <article id="post3">
   <h2 class="title">图片</h2>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
-  <p>好看的图片<br/>
-    <img src="images/fanxiaoxuan.jpg"/>
-  </p>
+  <div class="images clearfix">
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+    <div class="image">
+      <p>好看的图片</p>
+      <img src="images/fanxiaoxuan.jpg"/>
+    </div>
+  </div>
 </article>
 <article id="post4">
   <h2 class="title">最后一篇文章一级标题</h2>
