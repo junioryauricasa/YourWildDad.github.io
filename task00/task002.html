@@ -98,16 +98,19 @@
       -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
+    .post:last-child {
+      margin-bottom: 0;
+    }
     h2.title {
       font-weight: bold;
       line-height: 3rem;
     }
-    .post > .description {
+    .post .description {
       font-weight: bold;
       line-height: 3rem;
       color: #666;
     }
-    .post > .author {
+    .post .author, .post .time {
       font-size: .9em;
       line-height: 3rem;
       color: #777;
@@ -161,35 +164,39 @@
     }
     aside {
       width: 100%;
-      padding: 1em 1.5em;
+      padding: 0 1.5em 1.5em 1.5em
+    }
+    .aside-content {
+      width: 100%;
+      padding: 1.5em;
       border: 1px solid rgba(0, 0, 0, .2);
       background-color: #fafafa;
       -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
       -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
-    aside table {
+    .aside-content table {
       width: 100%;
     }
-    aside table td:first-child {
+    .aside-content table td:first-child {
       text-align: right;
       vertical-align: top;
     }
-    aside table td:last-child {
+    .aside-content table td:last-child {
       text-align: left;
       vertical-align: top;
     }
-    aside > .title {
+    .aside-content > .title {
       padding: 0 1em;
       border-left: .3em solid #ddd;
     }
-    aside .help-info {
+    .aside-content .help-info {
       line-height: 2em;
       display: inline-block;
       margin-bottom: 1em;
       color: #aaa;
     }
-    aside .btn-submit {
+    .aside-content .btn-submit {
       font-size: 1.5em;
       width: 100%;
       height: 2em;
@@ -224,7 +231,7 @@
       <h2 class="title">文章的一级标题</h2>
       <h3 class="description">文章的二级标题</h3>
       <span class="author">文章作者</span>
-      <time>文章发表时间</time>
+      <time class="time">文章发表时间</time>
     </header>
     <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
       这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
@@ -245,7 +252,7 @@
       <h2 class="title">另一篇文章一级标题</h2>
       <h3 class="description">文章二级标题</h3>
       <span class="author">文章作者</span>
-      <time>文章发表时间</time>
+      <time class="time">文章发表时间</time>
     </header>
     <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
       这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>
@@ -308,7 +315,7 @@
       <h2 class="title">最后一篇文章一级标题</h2>
       <h3 class="description">文章二级标题</h3>
       <span class="author">文章作者</span>
-      <time>文章发表时间</time>
+      <time class="time">文章发表时间</time>
     </header>
     <ol>
       <li>排名1</li>
@@ -356,68 +363,70 @@
   </article>
 </main>
 <aside>
-  <h2 class="title">这里以后是一个侧栏，这是侧栏的标题</h2>
-  <form action="/" method="post">
-    <table>
-      <tbody>
-      <tr>
-        <td><label for="email">请输入邮箱地址：</label></td>
-        <td><input type="email" placeholder="这是一个文本输入框" name="email" id="email"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><span class="help-info">邮箱地址请按要求格式输入</span></td>
-      </tr>
-      <tr>
-        <td><label for="pwd">请输入密码：</label></td>
-        <td><input type="password" placeholder="这是一个文本输入框" id="pwd"></td>
-      </tr>
-      <tr>
-        <td><label for="pwdagein">请重复输入密码：</label></td>
-        <td><input type="password" placeholder="这是一个文本输入框" name="pwd" id="pwdagein"><br></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><span class="help-info">密码请为6—16位英文字母</span></td>
-      </tr>
-      <tr>
-        <td><span>性别：</span></td>
-        <td>
-          <input type="radio" value="男" name="sex" id="man"> <label for="man">男</label>
-          <input type="radio" value="女" name="sex" id="woman"> <label for="woman">女</label>
-        </td>
-      </tr>
-      <tr>
-        <td><label for="city">城市：</label></td>
-        <td>
-          <input id="city" list="city-list"/>
-          <datalist id="city-list">
-            <option value="北京" selected="selected">北京</option>
-            <option value="上海">上海</option>
-            <option value="广州">广州</option>
-            <option value="深圳">深圳</option>
-          </datalist>
-        </td>
-      </tr>
-      <tr>
-        <td><span>爱好：</span></td>
-        <td>
-          <input type="checkbox" value="运动" name="hobby" id="sport">
-          <label for="sport">运动</label>
-          <input type="checkbox" value="艺术" name="hobby" id="art">
-          <label for="art">艺术</label>
-          <input type="checkbox" value="科学" name="hobby" id="science">
-          <label for="science">科学</label>
-        </td>
-      </tr>
-      <tr>
-        <td><label for="detail">个人描述：</label></td>
-        <td><textarea name="detail" id="detail" style="width:100%;height:10em;">这是一个多行输入文本，输入您的个人描述</textarea></td>
-      </tr>
-      </tbody>
-    </table>
-    <button type="submit" class="btn-submit">提交</button>
-  </form>
+  <div class="aside-content">
+    <h2 class="title">这里以后是一个侧栏，这是侧栏的标题</h2>
+    <form action="/" method="post">
+      <table>
+        <tbody>
+        <tr>
+          <td><label for="email">请输入邮箱地址：</label></td>
+          <td><input type="email" placeholder="这是一个文本输入框" name="email" id="email"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><span class="help-info">邮箱地址请按要求格式输入</span></td>
+        </tr>
+        <tr>
+          <td><label for="pwd">请输入密码：</label></td>
+          <td><input type="password" placeholder="这是一个文本输入框" id="pwd"></td>
+        </tr>
+        <tr>
+          <td><label for="pwdagein">请重复输入密码：</label></td>
+          <td><input type="password" placeholder="这是一个文本输入框" name="pwd" id="pwdagein"><br></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><span class="help-info">密码请为6—16位英文字母</span></td>
+        </tr>
+        <tr>
+          <td><span>性别：</span></td>
+          <td>
+            <input type="radio" value="男" name="sex" id="man"> <label for="man">男</label>
+            <input type="radio" value="女" name="sex" id="woman"> <label for="woman">女</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="city">城市：</label></td>
+          <td>
+            <input id="city" list="city-list"/>
+            <datalist id="city-list">
+              <option value="北京" selected="selected">北京</option>
+              <option value="上海">上海</option>
+              <option value="广州">广州</option>
+              <option value="深圳">深圳</option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td><span>爱好：</span></td>
+          <td>
+            <input type="checkbox" value="运动" name="hobby" id="sport">
+            <label for="sport">运动</label>
+            <input type="checkbox" value="艺术" name="hobby" id="art">
+            <label for="art">艺术</label>
+            <input type="checkbox" value="科学" name="hobby" id="science">
+            <label for="science">科学</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="detail">个人描述：</label></td>
+          <td><textarea name="detail" id="detail" style="width:100%;height:10em;">这是一个多行输入文本，输入您的个人描述</textarea></td>
+        </tr>
+        </tbody>
+      </table>
+      <button type="submit" class="btn-submit">提交</button>
+    </form>
+  </div>
 </aside>
 <footer class="footer">
   <span>版权所有&copy;</span>
