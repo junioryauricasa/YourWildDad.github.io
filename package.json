@@ -1,0 +1,28 @@
+{
+  "name": "baidu-ife-task",
+  "version": "1.0.0",
+  "description": "百度前端技术学院任务成果展示",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YourWildDad/YourWildDad.github.io.git"
+  },
+  "keywords": [
+    "baidu",
+    "ife"
+  ],
+  "author": "YourWildDad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YourWildDad/YourWildDad.github.io/issues"
+  },
+  "homepage": "https://github.com/YourWildDad/YourWildDad.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "less-plugin-autoprefix": "^1.5.1"
+  }
+}
