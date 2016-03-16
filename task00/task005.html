@@ -7,10 +7,12 @@
   <title>任务二：零基础HTML及CSS编码（一）</title>
   <link rel="stylesheet" href="../stylesheets/normalize.css">
   <style>
-    html, body {
+    html,
+    body {
       font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 14px;
       width: 100%;
+      margin: 0;
     }
     body {
       position: relative;
@@ -24,7 +26,12 @@
     a {
       text-decoration: none;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-weight: 300;
       margin: 0;
     }
@@ -37,14 +44,16 @@
     .clear-fix {
       *zoom: 1;
     }
-    .clear-fix:after, .clear-fix:before {
+    .clear-fix:after,
+    .clear-fix:before {
       display: table;
       content: '';
     }
     .clear-fix:after {
       clear: both;
     }
-    .header, .footer {
+    .header,
+    .footer {
       position: absolute;
       left: 0;
       width: 100%;
@@ -76,12 +85,12 @@
     }
     .navbar > .menu {
       display: none;
-      width: 2.5em;
-      height: 2em;
-      vertical-align: middle;
-      border: 0;
-      outline: none;
       background-color: transparent;
+      border: 0;
+      height: 2em;
+      width: 2.5em;
+      vertical-align: middle;
+      outline: none;
     }
     .navbar li {
       float: left;
@@ -94,9 +103,9 @@
       display: block;
       width: 22px;
       height: 2px;
-      margin-top: 6px;
       border-radius: 1px;
       background-color: #fff;
+      margin-top: 6px;
     }
     .menu-icon:first-child {
       margin-top: 0;
@@ -108,7 +117,8 @@
     .title > .logo {
       height: 4em;
     }
-    main, aside {
+    main,
+    aside {
       position: relative;
       float: left;
     }
@@ -120,15 +130,16 @@
       width: 100%;
       margin-bottom: 1.5em;
       padding: 1em 1.5em;
-      border: 1px solid rgba(0, 0, 0, .2);
+      border: 1px solid rgba(0, 0, 0, 0.2);
       background-color: #fafafa;
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     }
     .post .title {
       font-weight: bold;
       line-height: 3rem;
     }
-    .post .author, .post .time {
+    .post .author,
+    .post .time {
       font-size: .9em;
       line-height: 3rem;
       color: #777;
@@ -189,7 +200,8 @@
       width: 30rem;
     }
     @media (max-width: 800px) {
-      main, aside {
+      main,
+      aside {
         width: 100%;
       }
       .navbar > .nav {
@@ -202,12 +214,15 @@
     .aside-content {
       width: 100%;
       padding: 1.5em;
-      border: 1px solid rgba(0, 0, 0, .2);
+      border: 1px solid rgba(0, 0, 0, 0.2);
       background-color: #fafafa;
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     }
     .aside-content table {
       width: 100%;
+    }
+    .aside-content table td {
+      padding: .2em 0;
     }
     .aside-content table td:first-child {
       text-align: right;
