@@ -36,7 +36,7 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box;
     }
-    header {
+    .header {
       position: relative;
       width: 100%;
       padding: 0 2em;
@@ -44,11 +44,11 @@
       background-color: #111;
       *zoom: 1;
     }
-    header:after, header:before {
+    .header:after, .header:before {
       display: table;
       content: '';
     }
-    header:after {
+    .header:after {
       clear: both;
     }
     main {
@@ -56,7 +56,7 @@
       width: 100%;
       padding: 1.5em;
     }
-    footer {
+    .footer {
       font-size: 1.5em;
       line-height: 5rem;
       position: relative;
@@ -67,28 +67,28 @@
       color: #fafafa;
       background-color: #111;
     }
-    header > .title {
+    .header > .title {
       float: left;
     }
-    header > nav, .title > h1 {
+    .header > .navbar, .title > h1 {
       line-height: 5rem;
       float: right;
     }
     .title > .logo {
       height: 4em;
     }
-    nav > ul {
+    .navbar > ul {
       font-size: 1.1em;
       font-weight: 400;
     }
-    nav li {
+    .navbar li {
       float: left;
       margin-left: 2em;
     }
-    nav li > a {
+    .navbar li > a {
       color: inherit;
     }
-    article {
+    .post {
       width: 100%;
       margin-bottom: 1.5em;
       padding: 1em 1.5em;
@@ -102,31 +102,31 @@
       font-weight: bold;
       line-height: 3rem;
     }
-    article > .description {
+    .post > .description {
       font-weight: bold;
       line-height: 3rem;
       color: #666;
     }
-    article > .author {
+    .post > .author {
       font-size: .9em;
       line-height: 3rem;
       color: #777;
     }
-    article > p {
+    .post > p {
       line-height: 1.8em;
       margin: 0;
       text-indent: 2em;
     }
-    article ul {
+    .post ul {
       padding-left: 2em;
       list-style: none;
       -webkit-padding-start: 2em;
       -moz-padding-start: 2em;
     }
-    article li {
+    .post li {
       line-height: 2rem;
     }
-    article .image {
+    .post .image {
       width: 10em;
       padding: 1em;
       text-align: center;
@@ -135,27 +135,27 @@
     .image > img {
       width: 100%;
     }
-    article table {
+    .post table {
       width: 100%;
       border: 1px solid #ddd;
     }
-    article table > thead {
+    .post table > thead {
       color: #fff;
       background-color: #222;
     }
-    article table > caption {
+    .post table > caption {
       font-size: 1.1em;
       font-weight: 500;
       text-align: left;
     }
-    article table td {
+    .post table td {
       border-right: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
     }
-    article table td:last-child {
+    .post table td:last-child {
       border-right: none;
     }
-    article table > tfoot {
+    .post table > tfoot {
       font-weight: 600;
       background-color: #ddd;
     }
@@ -204,12 +204,12 @@
   </style>
 </head>
 <body>
-<header>
+<header class="header">
   <div class="title">
     <img src="images/logo_white.png" alt="百度" class="logo">
     <h1>网站的一级标题</h1>
   </div>
-  <nav>
+  <nav class="navbar">
     <ul>
       <li><a href="#post1">导航链接一</a></li>
       <li><a href="#post2">导航链接二</a></li>
@@ -219,7 +219,7 @@
   </nav>
 </header>
 <main>
-  <article id="post1">
+  <article class="post" id="post1">
     <h2 class="title">文章的一级标题</h2>
     <h3 class="description">文章的二级标题</h3>
   <span class="author">文章作者
@@ -239,7 +239,7 @@
       这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
     </p>
   </article>
-  <article id="post2">
+  <article class="post" id="post2">
     <h2 class="title">另一篇文章一级标题</h2>
     <h3 class="description">文章二级标题</h3>
   <span class="author">文章作者
@@ -258,7 +258,7 @@
       <li>列表项目三</li>
     </ul>
   </article>
-  <article id="post3">
+  <article class="post" id="post3">
     <h2 class="title">图片</h2>
     <figure class="image">
       <figcaption>好看的图片</figcaption>
@@ -301,7 +301,7 @@
       <img src="images/fanxiaoxuan.jpg"/>
     </figure>
   </article>
-  <article id="post4">
+  <article class="post" id="post4">
     <h2 class="title">最后一篇文章一级标题</h2>
     <h3 class="description">文章二级标题</h3>
   <span class="author">文章作者
@@ -351,72 +351,72 @@
       </tfoot>
     </table>
   </article>
-  <aside>
-    <h2 class="title">这里以后是一个侧栏，这是侧栏的标题</h2>
-    <form action="/" method="post">
-      <table>
-        <tbody>
-        <tr>
-          <td><label for="email">请输入邮箱地址：</label></td>
-          <td><input type="email" placeholder="这是一个文本输入框" name="email" id="email"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><span class="help-info">邮箱地址请按要求格式输入</span></td>
-        </tr>
-        <tr>
-          <td><label for="pwd">请输入密码：</label></td>
-          <td><input type="password" placeholder="这是一个文本输入框" id="pwd"></td>
-        </tr>
-        <tr>
-          <td><label for="pwdagein">请重复输入密码：</label></td>
-          <td><input type="password" placeholder="这是一个文本输入框" name="pwd" id="pwdagein"><br></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><span class="help-info">密码请为6—16位英文字母</span></td>
-        </tr>
-        <tr>
-          <td><span>性别：</span></td>
-          <td>
-            <input type="radio" value="男" name="sex" id="man"> <label for="man">男</label>
-            <input type="radio" value="女" name="sex" id="woman"> <label for="woman">女</label>
-          </td>
-        </tr>
-        <tr>
-          <td><label for="city">城市：</label></td>
-          <td>
-            <input id="city" list="city-list"/>
-            <datalist id="city-list">
-              <option value="北京" selected="selected">北京</option>
-              <option value="上海">上海</option>
-              <option value="广州">广州</option>
-              <option value="深圳">深圳</option>
-            </datalist>
-          </td>
-        </tr>
-        <tr>
-          <td><span>爱好：</span></td>
-          <td>
-            <input type="checkbox" value="运动" name="hobby" id="sport">
-            <label for="sport">运动</label>
-            <input type="checkbox" value="艺术" name="hobby" id="art">
-            <label for="art">艺术</label>
-            <input type="checkbox" value="科学" name="hobby" id="science">
-            <label for="science">科学</label>
-          </td>
-        </tr>
-        <tr>
-          <td><label for="detail">个人描述：</label></td>
-          <td><textarea name="detail" id="detail" style="width:100%;height:10em;">这是一个多行输入文本，输入您的个人描述</textarea></td>
-        </tr>
-        </tbody>
-      </table>
-      <button type="submit" class="btn-submit">提交</button>
-    </form>
-  </aside>
 </main>
-<footer>
+<aside>
+  <h2 class="title">这里以后是一个侧栏，这是侧栏的标题</h2>
+  <form action="/" method="post">
+    <table>
+      <tbody>
+      <tr>
+        <td><label for="email">请输入邮箱地址：</label></td>
+        <td><input type="email" placeholder="这是一个文本输入框" name="email" id="email"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><span class="help-info">邮箱地址请按要求格式输入</span></td>
+      </tr>
+      <tr>
+        <td><label for="pwd">请输入密码：</label></td>
+        <td><input type="password" placeholder="这是一个文本输入框" id="pwd"></td>
+      </tr>
+      <tr>
+        <td><label for="pwdagein">请重复输入密码：</label></td>
+        <td><input type="password" placeholder="这是一个文本输入框" name="pwd" id="pwdagein"><br></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><span class="help-info">密码请为6—16位英文字母</span></td>
+      </tr>
+      <tr>
+        <td><span>性别：</span></td>
+        <td>
+          <input type="radio" value="男" name="sex" id="man"> <label for="man">男</label>
+          <input type="radio" value="女" name="sex" id="woman"> <label for="woman">女</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="city">城市：</label></td>
+        <td>
+          <input id="city" list="city-list"/>
+          <datalist id="city-list">
+            <option value="北京" selected="selected">北京</option>
+            <option value="上海">上海</option>
+            <option value="广州">广州</option>
+            <option value="深圳">深圳</option>
+          </datalist>
+        </td>
+      </tr>
+      <tr>
+        <td><span>爱好：</span></td>
+        <td>
+          <input type="checkbox" value="运动" name="hobby" id="sport">
+          <label for="sport">运动</label>
+          <input type="checkbox" value="艺术" name="hobby" id="art">
+          <label for="art">艺术</label>
+          <input type="checkbox" value="科学" name="hobby" id="science">
+          <label for="science">科学</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="detail">个人描述：</label></td>
+        <td><textarea name="detail" id="detail" style="width:100%;height:10em;">这是一个多行输入文本，输入您的个人描述</textarea></td>
+      </tr>
+      </tbody>
+    </table>
+    <button type="submit" class="btn-submit">提交</button>
+  </form>
+</aside>
+<footer class="footer">
   <span>版权所有&copy;</span>
 </footer>
 </body>
