@@ -45,43 +45,45 @@
   <section>
     <ul class="list">
       <li class="item active">
-        <span class="title">个人报表</span>
+        <a href="#"><img src="images/ico-bchart.png"><span class="title">个人报表</span></a>
         <ul class="list">
           <li class="item">
-            <span class="title">文件一</span>
+            <a href="#"><img src="images/ico-file.png"><span class="title">文件一</span></a>
           </li>
           <li class="item active">
-            <span class="title">文件二</span>
+            <a href="#"><img src="images/ico-bfile.png"><span class="title">文件二</span></a>
             <ul class="list">
               <li class="item active">
-                <span class="title">文档一</span>
+                <a href="#"><img src="images/ico-bdoc.png"><span class="title">文档一</span></a>
               </li>
               <li class="item">
-                <span class="title">文档二</span>
+                <a href="#"><img src="images/ico-file.png"><span class="title">文档二</span></a>
               </li>
             </ul>
           </li>
-          <li class="item"><span class="title">文件三</span></li>
+          <li class="item">
+            <a href="#"><img src="images/ico-file.png"><span class="title">文件三</span></a>
+          </li>
         </ul>
       </li>
       <li class="item">
-        <span>个人收藏</span>
+        <a href="#"><img src="images/ico-star.png"><span>个人收藏</span></a>
         <ul class="list"></ul>
       </li>
       <li class="item">
-        <span>我的分享</span>
+        <a href="#"><img src="images/ico-share.png"><span>我的分享</span></a>
         <ul class="list"></ul>
       </li>
       <li class="item">
-        <span>图库</span>
+        <a href="#"><img src="images/ico-star.png"><span>图库</span></a>
         <ul class="list"></ul>
       </li>
       <li class="item">
-        <span>成长记录</span>
+        <a href="#"><img src="images/ico-star.png"><span>成长记录</span></a>
         <ul class="list"></ul>
       </li>
       <li class="item">
-        <span>账户信息</span>
+        <a href="#"><img src="images/ico-count.png"><span>账户信息</span></a>
         <ul class="list"></ul>
       </li>
     </ul>
@@ -96,7 +98,52 @@
       <li>文档一</li>
     </ul>
   </nav>
-  <section class="content"></section>
+  <section class="content">
+    <form class="tab tab-12 search-form clear-fix">
+      <div class="first">
+        <label for="first-list">查询项</label>
+        <select id="first-list">
+          <option value="第一项" selected>第一项</option>
+          <option value="第二项">第二项</option>
+          <option value="第三项">第三项</option>
+          <option value="第四项">第四项</option>
+        </select>
+      </div>
+      <div class="customer">
+        <label for="buy-list">买方</label>
+        <select id="buy-list">
+          <option value="小A" selected>小A</option>
+          <option value="小S">小S</option>
+          <option value="小D">小D</option>
+          <option value="小F">小F</option>
+        </select><br>
+        <label for="seal-list">卖方</label>
+        <select id="seal-list">
+          <option value="小C" selected>小C</option>
+          <option value="小V">小V</option>
+          <option value="小B">小B</option>
+          <option value="小N">小N</option>
+        </select>
+      </div>
+      <div class="option">
+        <label for="date">日期</label>
+        <input type="date" value="2016-04-01" id="date">
+        <label for="all-time">总耗时</label>
+        <select id="all-time">
+          <option value="8" selected>8天</option>
+        </select><br>
+        <label for="count">人数</label>
+        <select id="count">
+          <option value="8" selected>8天</option>
+        </select>
+        <label for="success">成交项</label>
+        <select id="success">
+          <option value="8" selected>8天</option>
+        </select>
+      </div>
+      <button type="submit">搜索</button>
+    </form>
+  </section>
 </main>
 </body>
 </html>
