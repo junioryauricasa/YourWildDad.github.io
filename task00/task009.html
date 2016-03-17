@@ -6,160 +6,7 @@
   <title>任务九：使用HTML/CSS实现一个复杂页面</title>
   <link rel="icon" href="../favicon.ico">
   <link rel="stylesheet" href="../stylesheets/normalize.css">
-  <style>
-    html,
-    body {
-      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      width: 100%;
-      height: 100%;
-    }
-    @media (max-width: 800px) {
-      html,
-      body {
-        font-size: 13px;
-      }
-    }
-    @media (min-width: 801px) and (max-width: 1366px) {
-      html,
-      body {
-        font-size: 14px;
-      }
-    }
-    @media (min-width: 1367px) and (max-width: 1600px) {
-      html,
-      body {
-        font-size: 16px;
-      }
-    }
-    @media (min-width: 1601px) and (max-width: 1920px) {
-      html,
-      body {
-        font-size: 18px;
-      }
-    }
-    body {
-      min-width: 800px;
-      overflow: auto;
-      position: relative;
-      padding-top: 4rem;
-    }
-    ul {
-      margin: 0;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    .clear-fix {
-      *zoom: 1;
-    }
-    .clear-fix:after,
-    .clear-fix:before {
-      display: table;
-      content: '';
-    }
-    .clear-fix:after {
-      clear: both;
-    }
-    .nav {
-      position: absolute;
-      height: 4rem;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background-color: #2189bf;
-      padding: 1rem 2rem;
-    }
-    .nav .logo {
-      margin-left: 1rem;
-      float: left;
-    }
-    .nav .logo > img {
-      height: 2rem;
-    }
-    .nav .funcyusa {
-      float: right;
-    }
-    .nav .funcyusa .input-group,
-    .nav .funcyusa .login {
-      float: left;
-      margin: .25rem .5rem;
-    }
-    .nav .funcyusa .search {
-      width: 20rem;
-      height: 1.5rem;
-      border: 0;
-      border-radius: 1.5rem;
-      padding: 0 .5rem 0 2rem;
-      background: #fff url(images/search.png) no-repeat left;
-    }
-    .nav .funcyusa .input-btn {
-      display: none;
-    }
-    .nav .funcyusa .login-btn {
-      border: 0;
-      background-color: transparent;
-      height: 1.5rem;
-      color: #fff;
-    }
-    .nav .funcyusa .login-btn > img {
-      vertical-align: middle;
-      margin-right: .3rem;
-      width: 1.1rem;
-    }
-    .sidebar {
-      position: relative;
-      height: 100%;
-      width: 20rem;
-      background-color: #2a2e3d;
-      color: #6e8095;
-      padding-top: 10rem;
-    }
-    .sidebar > .user-info {
-      position: absolute;
-      height: 10rem;
-      top: 0;
-      width: 100%;
-    }
-    .sidebar section {
-      height: 100%;
-      width: 100%;
-      overflow: auto;
-    }
-    .sidebar .list {
-      list-style: none;
-      padding: 0;
-      font-weight: bold;
-    }
-    .sidebar .item {
-      padding-left: 3rem;
-      line-height: 2rem;
-    }
-    .sidebar .item.active {
-      background-color: #3F4350;
-    }
-    .sidebar .item.active > span {
-      color: #ededf0;
-    }
-    .user-info > .user {
-      height: 50%;
-    }
-    .user-info > .user > .icon,
-    .user-info > .user > .id {
-      float: left;
-      margin: 0;
-      text-align: center;
-    }
-    .user-info > .user > .icon {
-      height: 4.5rem;
-      width: 4.5rem;
-      border-radius: 4.5rem;
-      padding: .25rem;
-      border: 0.1rem solid #6e8095;
-    }
-    .user-info > .user img {
-      width: 4rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style/task009.css">
 </head>
 <body>
 <header class="nav clear-fix">
@@ -179,10 +26,21 @@
 <aside class="sidebar">
   <header class="user-info">
     <div class="user clear-fix">
-      <img src="images/user-icon.png" alt="user">
-      <div class="id"></div>
+      <div class="icon">
+        <div style="background-image: url('images/user-icon.png')"></div>
+      </div>
+      <span class="id">YourWildDad</span>
     </div>
-    <div class="info"></div>
+    <div class="info">
+      <div class="collect">
+        <p>110</p>
+        <p>收藏</p>
+      </div>
+      <div class="fans">
+        <p>999</p>
+        <p>粉丝</p>
+      </div>
+    </div>
   </header>
   <section>
     <ul class="list">
@@ -196,10 +54,10 @@
             <span class="title">文件二</span>
             <ul class="list">
               <li class="item active">
-                <span class="title">文档1</span>
+                <span class="title">文档一</span>
               </li>
               <li class="item">
-                <span class="title">文档2</span>
+                <span class="title">文档二</span>
               </li>
             </ul>
           </li>
@@ -229,6 +87,16 @@
     </ul>
   </section>
 </aside>
-<main class="main-content"></main>
+<main class="main-content">
+  <nav class="breadcrumb-nav">
+    <ul>
+      <li>C站</li>
+      <li>个人报表</li>
+      <li>文件一</li>
+      <li>文档一</li>
+    </ul>
+  </nav>
+  <section class="content"></section>
+</main>
 </body>
 </html>
