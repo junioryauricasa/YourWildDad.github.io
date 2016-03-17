@@ -1,0 +1,138 @@
+html, body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 800px) {
+    font-size: 13px;
+  }
+  @media (min-width: 801px) and  (max-width: 1366px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1367px) and  (max-width: 1600px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1601px) and  (max-width: 1920px) {
+    font-size: 18px;
+  }
+}
+body {
+  min-width: 800px;
+  overflow: auto;
+  position: relative;
+  padding-top: 4rem;
+}
+ul {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.clear-fix {
+  *zoom: 1;
+  &:after, &:before {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both;
+  }
+}
+.nav {
+  position: absolute;
+  height: 4rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 137, 191, 1);
+  padding: 1rem 2rem;
+  .logo {
+    margin-left: 1rem;
+    float: left;
+    & > img {
+      height: 2rem;
+    }
+  }
+  .funcyusa {
+    float: right;
+    .input-group, .login {
+      float: left;
+      margin: .25rem .5rem;
+    }
+    .search {
+      width: 20rem;
+      height: 1.5rem;
+      border: 0;
+      border-radius: 1.5rem;
+      padding: 0 .5rem 0 2rem;
+      background: #fff url(../images/search.png) no-repeat left;
+    }
+    .input-btn {
+      display: none;
+    }
+    .login-btn {
+      border: 0;
+      background-color: transparent;
+      height: 1.5rem;
+      color: #fff;
+      & > img {
+        vertical-align: middle;
+        margin-right: .3rem;
+        width: 1.1rem;
+      }
+    }
+  }
+}
+.sidebar {
+  position: relative;
+  height: 100%;
+  width: 20rem;
+  background-color: rgba(42, 46, 61, 1);
+  color: rgba(110, 128, 149, 1);
+  padding-top: 10rem;
+  & > .user-info {
+    position: absolute;
+    height: 10rem;
+    top: 0;
+    width: 100%;
+  }
+  section {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    font-weight: bold;
+  }
+  .item {
+    padding-left: 3rem;
+    line-height: 2rem;
+    &.active {
+      background-color: #3F4350;
+      & > span {
+        color: rgb(237, 237, 240);
+      }
+    }
+  }
+}
+.user-info {
+  & > .user {
+    height: 50%;
+    & > .icon, & > .id {
+      float: left;
+      margin: 0;
+      text-align: center;
+    }
+    & > .icon {
+      height: 4.5rem;
+      width: 4.5rem;
+      border-radius: 4.5rem;
+      padding: .25rem;
+      border: .1rem solid rgba(110, 128, 149, 1);
+    }
+    img {
+      width: 4rem;
+    }
+  }
+}

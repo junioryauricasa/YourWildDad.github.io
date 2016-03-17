@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>任务九：使用HTML/CSS实现一个复杂页面</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../stylesheets/normalize.css">
+  <link rel="stylesheet" href="style/task009.css">
+</head>
+<body>
+<header class="nav clear-fix">
+  <a class="logo" href="#">
+    <img src="images/task9-logo.png" alt="icon">
+  </a>
+  <div class="funcyusa">
+    <form class="input-group">
+      <input class="input-btn" type="submit">
+      <input class="search" type="text" name="search">
+    </form>
+    <div class="login">
+      <button class="login-btn"><img src="images/login.png" alt="login"/>登陆</button>
+    </div>
+  </div>
+</header>
+<aside class="sidebar">
+  <header class="user-info">
+    <div class="user clear-fix">
+      <img src="images/user-icon.png" alt="user">
+      <div class="id"></div>
+    </div>
+    <div class="info"></div>
+  </header>
+  <section>
+    <ul class="list">
+      <li class="item active">
+        <span class="title">个人报表</span>
+        <ul class="list">
+          <li class="item">
+            <span class="title">文件一</span>
+          </li>
+          <li class="item active">
+            <span class="title">文件二</span>
+            <ul class="list">
+              <li class="item active">
+                <span class="title">文档1</span>
+              </li>
+              <li class="item">
+                <span class="title">文档2</span>
+              </li>
+            </ul>
+          </li>
+          <li class="item"><span class="title">文件三</span></li>
+        </ul>
+      </li>
+      <li class="item">
+        <span>个人收藏</span>
+        <ul class="list"></ul>
+      </li>
+      <li class="item">
+        <span>我的分享</span>
+        <ul class="list"></ul>
+      </li>
+      <li class="item">
+        <span>图库</span>
+        <ul class="list"></ul>
+      </li>
+      <li class="item">
+        <span>成长记录</span>
+        <ul class="list"></ul>
+      </li>
+      <li class="item">
+        <span>账户信息</span>
+        <ul class="list"></ul>
+      </li>
+    </ul>
+  </section>
+</aside>
+<main class="main-content"></main>
+</body>
+</html>
