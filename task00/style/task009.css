@@ -39,6 +39,12 @@ ul {
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+}
 input,
 button {
   outline: none;
@@ -73,15 +79,15 @@ button {
 .nav .logo > img {
   height: 2rem;
 }
-.nav .funcyusa {
+.nav .function {
   float: right;
 }
-.nav .funcyusa .input-group,
-.nav .funcyusa .login {
+.nav .function .input-group,
+.nav .function .login {
   float: left;
   margin: .25rem .5rem;
 }
-.nav .funcyusa .search {
+.nav .function .search {
   width: 20rem;
   height: 1.5rem;
   border: 0;
@@ -89,16 +95,16 @@ button {
   padding: 0 .5rem 0 2rem;
   background: #fff url(../images/search.png) no-repeat left;
 }
-.nav .funcyusa .input-btn {
+.nav .function .input-btn {
   display: none;
 }
-.nav .funcyusa .login-btn {
+.nav .function .login-btn {
   border: 0;
   background-color: transparent;
   height: 1.5rem;
   color: #fff;
 }
-.nav .funcyusa .login-btn > img {
+.nav .function .login-btn > img {
   vertical-align: middle;
   margin-right: .3rem;
   width: 1.1rem;
@@ -133,11 +139,6 @@ button {
 .sidebar .item {
   padding-left: 2.5rem;
   line-height: 3rem;
-}
-.sidebar .item a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
 }
 .sidebar .item img {
   height: .8rem;
@@ -223,6 +224,12 @@ button {
 .breadcrumb-nav li {
   float: left;
   margin-right: .5rem;
+}
+.breadcrumb-nav li > a {
+  display: inline;
+}
+.breadcrumb-nav li:hover {
+  color: #2189bf;
 }
 .breadcrumb-nav li + li:before {
   content: "/";
@@ -346,11 +353,8 @@ button {
   padding: 0 .2rem;
 }
 .time-line .time-item > a {
-  text-decoration: none;
-  color: inherit;
   width: 100%;
   height: 100%;
-  display: block;
   border-top: .3rem solid transparent;
 }
 .time-line .time-item > a > .time,
@@ -396,13 +400,12 @@ button {
   padding-left: .4rem;
 }
 .history > .history-btn {
-  display: block;
   height: 6.4rem;
-  line-height: 2.4rem;
-  padding: 2rem 0;
+  line-height: 6.4rem;
   text-align: center;
   width: 100%;
-  cursor: pointer;
+  padding-left: 2.7rem;
+  background: #fff url(../images/search-ico.png) no-repeat left;
 }
 .statistics > ul {
   text-align: justify;
@@ -493,4 +496,63 @@ button {
   padding: 1rem;
   width: 100%;
   height: 100%;
+}
+.tabs {
+  height: 100%;
+  width: 100%;
+  padding-top: 2.5rem;
+  position: relative;
+}
+.tabs > .tab-nav-list {
+  line-height: 2.5rem;
+  width: 100%;
+  position: absolute;
+  top: 1px;
+  white-space: nowrap;
+}
+.tabs > .tab-nav-list > .tab-nav {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.tabs > .tab-nav-list a {
+  text-align: center;
+  padding: 0 1.5rem;
+  height: 2.3rem;
+  border: .1rem solid transparent;
+  border-bottom-color: #cbcbcb;
+  border-radius: .4rem .4rem 0 0;
+  background-color: #ededf0;
+}
+.tabs > .tab-nav-list a:hover {
+  background-color: #dfdfe4;
+}
+.tabs > .tab-nav-list a.active,
+.tabs > .tab-nav-list a.active:hover {
+  background-color: #fff;
+  border-color: #cbcbcb #cbcbcb #fff #cbcbcb;
+}
+.tabs .tab-list,
+.tabs .tab-content {
+  width: 100%;
+  height: 100%;
+}
+.tabs .tab-list {
+  border: 1px solid #cbcbcb;
+  border-radius: 0 0 .4rem .4rem;
+  overflow: hidden;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.tabs .tab-content {
+  padding: 1rem;
+}
+.tabs .tab-content table {
+  width: 100%;
+  line-height: 3rem;
+  text-align: center;
+}
+.tabs .tab-content table td {
+  border: 1px solid #cbcbcb;
+}
+.tabs .tab-content table td:hover {
+  background-color: #f3f5f6;
 }
