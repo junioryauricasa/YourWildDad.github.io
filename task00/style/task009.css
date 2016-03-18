@@ -4,25 +4,43 @@ body {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 800px) {
+@media (max-width: 987px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+@media (min-width: 988px) and (max-width: 1174px) {
   html,
   body {
     font-size: 13px;
   }
 }
-@media (min-width: 801px) and (max-width: 1366px) {
+@media (min-width: 1175px) and (max-width: 1361px) {
   html,
   body {
     font-size: 14px;
   }
 }
-@media (min-width: 1367px) and (max-width: 1600px) {
+@media (min-width: 1362px) and (max-width: 1548px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1549px) and (max-width: 1735px) {
   html,
   body {
     font-size: 16px;
   }
 }
-@media (min-width: 1601px) and (max-width: 1920px) {
+@media (min-width: 1736px) and (max-width: 1920px) {
+  html,
+  body {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1921px) {
   html,
   body {
     font-size: 18px;
@@ -410,7 +428,7 @@ button {
 .statistics > ul {
   text-align: justify;
   -moz-text-align-last: justify;
-  text-align-last: justify;
+       text-align-last: justify;
 }
 .statistics .volume {
   display: inline-block;
@@ -424,7 +442,7 @@ button {
   float: left;
   text-align: left;
   -moz-text-align-last: left;
-  text-align-last: left;
+       text-align-last: left;
   line-height: 2rem;
 }
 .statistics .volume .info > p:last-child {
@@ -496,6 +514,15 @@ button {
   padding: 1rem;
   width: 100%;
   height: 100%;
+  overflow: auto;
+}
+.panel > .panel-contents table {
+  width: 100%;
+  text-align: center;
+}
+.panel > .panel-contents table td {
+  cursor: pointer;
+  border: 1px solid #cbcbcb;
 }
 .tabs {
   height: 100%;
@@ -546,13 +573,40 @@ button {
   padding: 1rem;
 }
 .tabs .tab-content table {
-  width: 100%;
   line-height: 3rem;
-  text-align: center;
 }
-.tabs .tab-content table td {
-  border: 1px solid #cbcbcb;
-}
-.tabs .tab-content table td:hover {
+.tabs .tab-content td:hover {
   background-color: #f3f5f6;
+}
+#rank table {
+  line-height: 2rem;
+}
+#rank table tbody > tr:hover {
+  background-color: #f3f5f6;
+}
+.progress-bar {
+  position: relative;
+  display: block;
+  height: .4rem;
+  width: 50%;
+  border-radius: .2rem;
+  background-color: #dcdcdc;
+  float: right;
+  margin: .8rem 1rem 0 0;
+}
+.progress-bar > .progress {
+  display: block;
+  width: 70%;
+  height: .4rem;
+  background-color: #7ecaef;
+  border-radius: .2rem 0 0 .2rem;
+}
+.progress-bar > .progress.first {
+  background-color: #ed6e52;
+}
+.progress-bar > .progress.sec {
+  background-color: #ef8050;
+}
+.progress-bar > .progress.thr {
+  background-color: #f29f4f;
 }
