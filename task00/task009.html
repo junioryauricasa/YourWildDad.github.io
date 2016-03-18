@@ -99,50 +99,111 @@
     </ul>
   </nav>
   <section class="content">
-    <form class="tab tab-12 search-form clear-fix">
-      <div class="first">
-        <label for="first-list">查询项</label>
-        <select id="first-list">
-          <option value="第一项" selected>第一项</option>
-          <option value="第二项">第二项</option>
-          <option value="第三项">第三项</option>
-          <option value="第四项">第四项</option>
-        </select>
+    <div class="container">
+      <form class="tab tab-12 card search-form clear-fix">
+        <div class="first">
+          <label for="first-list">查询项</label>
+          <select id="first-list">
+            <option value="第一项" selected>第一项</option>
+            <option value="第二项">第二项</option>
+            <option value="第三项">第三项</option>
+            <option value="第四项">第四项</option>
+          </select>
+        </div>
+        <div class="customer">
+          <label for="buy-list">买方</label>
+          <select id="buy-list">
+            <option value="小A" selected>小A</option>
+            <option value="小S">小S</option>
+            <option value="小D">小D</option>
+            <option value="小F">小F</option>
+          </select><br>
+          <label for="seal-list">卖方</label>
+          <select id="seal-list">
+            <option value="小C" selected>小C</option>
+            <option value="小V">小V</option>
+            <option value="小B">小B</option>
+            <option value="小N">小N</option>
+          </select>
+          <img src="images/search-change.png" alt="交换">
+        </div>
+        <div class="option">
+          <label for="date">日期</label>
+          <input class="long-input" type="date" value="2016-04-01" id="date">
+          <label for="all-time">总耗时</label>
+          <select id="all-time">
+            <option value="8" selected>8天</option>
+          </select><br>
+          <label for="count">人数</label>
+          <select id="count">
+            <option value="8" selected>8天</option>
+          </select>
+          <label for="success">成交项</label>
+          <select class="long-input" id="success">
+            <option value="8" selected>8天</option>
+          </select>
+        </div>
+        <div class="submit">
+          <button class="btn btn-submit" type="submit">搜索</button>
+        </div>
+      </form>
+      <div class="tab tab-12">
+        <div class="time-line clear-fix">
+          <div class="card left-btn"></div>
+          <ul>
+            <li class="time-item active">
+              <a class="card" href="#">
+                <time class="time">10:00 am</time>
+                <span class="currency">1200</span>
+              </a>
+            </li>
+            <li class="time-item">
+              <a class="card" href="#">
+                <time class="time">11:00 am</time>
+                <span class="currency">1300</span>
+              </a>
+            </li>
+            <li class="time-item">
+              <a class="card" href="#">
+                <time class="time">12:00 am</time>
+                <span class="currency">1200</span>
+              </a>
+            </li>
+            <li class="time-item">
+              <a class="card" href="#">
+                <time class="time">01:00 pm</time>
+                <span class="currency">1400</span>
+              </a>
+            </li>
+            <li class="time-item">
+              <a class="card" href="#">
+                <time class="time">02:00 pm</time>
+                <span class="currency">1500</span>
+              </a>
+            </li>
+            <li class="time-item">
+              <a class="card" href="#">
+                <time class="time">03:00 pm</time>
+                <span class="currency">1800</span>
+              </a>
+            </li>
+          </ul>
+          <div class="card right-btn"></div>
+        </div>
+        <div class="history">
+          <a class="card history-btn"><img src="images/search-ico.png" alt="历史查询" class="icon"><span>历史查询</span></a>
+        </div>
       </div>
-      <div class="customer">
-        <label for="buy-list">买方</label>
-        <select id="buy-list">
-          <option value="小A" selected>小A</option>
-          <option value="小S">小S</option>
-          <option value="小D">小D</option>
-          <option value="小F">小F</option>
-        </select><br>
-        <label for="seal-list">卖方</label>
-        <select id="seal-list">
-          <option value="小C" selected>小C</option>
-          <option value="小V">小V</option>
-          <option value="小B">小B</option>
-          <option value="小N">小N</option>
-        </select>
+      <div>2016年4月份统计</div>
+      <div class="statistics">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
-      <div class="option">
-        <label for="date">日期</label>
-        <input type="date" value="2016-04-01" id="date">
-        <label for="all-time">总耗时</label>
-        <select id="all-time">
-          <option value="8" selected>8天</option>
-        </select><br>
-        <label for="count">人数</label>
-        <select id="count">
-          <option value="8" selected>8天</option>
-        </select>
-        <label for="success">成交项</label>
-        <select id="success">
-          <option value="8" selected>8天</option>
-        </select>
-      </div>
-      <button type="submit">搜索</button>
-    </form>
+    </div>
   </section>
 </main>
 </body>
