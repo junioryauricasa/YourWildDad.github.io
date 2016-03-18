@@ -240,13 +240,23 @@ button {
 }
 .card {
   background-color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 .tab {
-  margin-bottom: 1rem;
+  position: relative;
+  float: left;
+  margin: 0 0 1rem 0;
 }
 .tab.tab-12 {
   width: 100%;
+}
+.tab.tab-60 {
+  padding: 0 .5rem;
+  width: 60%;
+}
+.tab.tab-40 {
+  padding: 0 .5rem;
+  width: 40%;
 }
 .btn {
   border: .1rem solid;
@@ -393,4 +403,94 @@ button {
   text-align: center;
   width: 100%;
   cursor: pointer;
+}
+.statistics > ul {
+  text-align: justify;
+  -moz-text-align-last: justify;
+       text-align-last: justify;
+}
+.statistics .volume {
+  display: inline-block;
+  width: 23%;
+  height: 6.4rem;
+  border-left: .3rem solid;
+  padding: 1.2rem 1.4rem;
+}
+.statistics .volume .info {
+  height: 100%;
+  float: left;
+  text-align: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  line-height: 2rem;
+}
+.statistics .volume .info > p:last-child {
+  color: #999;
+  font-size: .9rem;
+}
+.statistics .volume .picture {
+  height: 100%;
+  width: 40%;
+  float: right;
+}
+.statistics .volume.green {
+  border-color: #43b29d;
+}
+.statistics .volume.green .picture {
+  background-color: #43b29d;
+}
+.statistics .volume.blue {
+  border-color: #398bc2;
+}
+.statistics .volume.blue .picture {
+  background-color: #398bc2;
+}
+.statistics .volume.red {
+  border-color: #d04a36;
+}
+.statistics .volume.red .picture {
+  background-color: #d04a36;
+}
+.statistics .volume.yellow {
+  border-color: #e2cd47;
+}
+.statistics .volume.yellow .picture {
+  background-color: #e2cd47;
+}
+.statistics .volume p {
+  margin: 0;
+}
+.panel {
+  border-radius: .5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  height: 30rem;
+  padding-top: 3rem;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.panel.panel-left {
+  margin-left: -0.5rem;
+}
+.panel.panel-right {
+  margin-right: -0.5rem;
+}
+.panel > .title {
+  position: absolute;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f3f5f6;
+  border-bottom: .1rem solid #ddd;
+  line-height: 2.9rem;
+  padding: 0 2rem;
+  color: #aaaaaa;
+}
+.panel > .panel-contents {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
 }
