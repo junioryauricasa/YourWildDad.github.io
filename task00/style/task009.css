@@ -410,7 +410,7 @@ button {
 .statistics > ul {
   text-align: justify;
   -moz-text-align-last: justify;
-       text-align-last: justify;
+  text-align-last: justify;
 }
 .statistics .volume {
   display: inline-block;
@@ -424,7 +424,7 @@ button {
   float: left;
   text-align: left;
   -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
   line-height: 2rem;
 }
 .statistics .volume .info > p:last-child {
