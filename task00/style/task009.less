@@ -208,10 +208,10 @@ input, button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 2rem;
   line-height: 2rem;
   color: rgba(176, 176, 176, 1);
   background-color: #fff;
+  font-size: .9rem;
   li {
     float: left;
     margin-right: .5rem;
@@ -264,6 +264,10 @@ input, button {
   padding: 0 1rem;
   border-radius: .2rem;
   line-height: 2.2rem;
+}
+.btn-toolbar {
+  border: 1px solid #aaa;
+  border-radius: .1rem;
 }
 .container {
   min-width: 60rem;
@@ -421,29 +425,17 @@ input, button {
       width: 40%;
       float: right;
     }
-    &.green {
+    &.green, &.green > .picture {
       border-color: #43b29d;
-      .picture {
-        background-color: #43b29d;
-      }
     }
-    &.blue {
+    &.blue, &.blue > .picture {
       border-color: #398bc2;
-      .picture {
-        background-color: #398bc2;
-      }
     }
-    &.red {
+    &.red, &.red > .picture {
       border-color: #d04a36;
-      .picture {
-        background-color: #d04a36;
-      }
     }
-    &.yellow {
+    &.yellow, &.yellow > .picture {
       border-color: #e2cd47;
-      .picture {
-        background-color: #e2cd47;
-      }
     }
     p {
       margin: 0
@@ -564,12 +556,12 @@ input, button {
   background-color: #dcdcdc;
   float: right;
   margin: .8rem 1rem 0 0;
+  overflow: hidden;
   & > .progress {
     display: block;
     width: 70%;
     height: .4rem;
     background-color: #7ecaef;
-    border-radius: .2rem 0 0 .2rem;
     &.first {
       background-color: #ed6e52;
     }
@@ -580,4 +572,48 @@ input, button {
       background-color: #f29f4f;
     }
   }
+}
+#calendar {
+
+  .toolbar {
+    margin-bottom: .5rem;
+    text-align: justify;
+    text-align-last: justify;
+    input, select, button {
+      line-height: 1.3rem;
+      height: 1.5rem;
+      vertical-align: top;
+    }
+  }
+  table {
+    border-spacing: 2px;
+    border-collapse: separate;
+    box-sizing: border-box;
+    font-size: .8rem;
+    td {
+      border: .1rem solid transparent;
+    }
+    & > thead > tr {
+      border-top: 2px solid #a9cfec;
+      border-bottom: 1px solid #e1e1e1;
+      line-height: 2rem;
+      & > td {
+        width: 14.28571428571429%;
+      }
+    }
+    & > tbody {
+      & > tr {
+        line-height: 1.4rem;
+        height: 4rem;
+        padding: .5rem 0;
+      }
+      td:hover, td.selected {
+        border: .1rem solid #f5c21d;
+      }
+      td:nth-last-child(2) > .date, td:last-child > .date, td.festival > .lunar-cal {
+        color: red;
+      }
+    }
+  }
+
 }

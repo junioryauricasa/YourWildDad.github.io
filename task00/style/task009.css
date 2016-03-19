@@ -234,10 +234,10 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 2rem;
   line-height: 2rem;
   color: #b0b0b0;
   background-color: #fff;
+  font-size: .9rem;
 }
 .breadcrumb-nav li {
   float: left;
@@ -290,6 +290,10 @@ button {
   padding: 0 1rem;
   border-radius: .2rem;
   line-height: 2.2rem;
+}
+.btn-toolbar {
+  border: 1px solid #aaa;
+  border-radius: .1rem;
 }
 .container {
   min-width: 60rem;
@@ -454,29 +458,21 @@ button {
   width: 40%;
   float: right;
 }
-.statistics .volume.green {
+.statistics .volume.green,
+.statistics .volume.green > .picture {
   border-color: #43b29d;
 }
-.statistics .volume.green .picture {
-  background-color: #43b29d;
-}
-.statistics .volume.blue {
+.statistics .volume.blue,
+.statistics .volume.blue > .picture {
   border-color: #398bc2;
 }
-.statistics .volume.blue .picture {
-  background-color: #398bc2;
-}
-.statistics .volume.red {
+.statistics .volume.red,
+.statistics .volume.red > .picture {
   border-color: #d04a36;
 }
-.statistics .volume.red .picture {
-  background-color: #d04a36;
-}
-.statistics .volume.yellow {
+.statistics .volume.yellow,
+.statistics .volume.yellow > .picture {
   border-color: #e2cd47;
-}
-.statistics .volume.yellow .picture {
-  background-color: #e2cd47;
 }
 .statistics .volume p {
   margin: 0;
@@ -593,13 +589,13 @@ button {
   background-color: #dcdcdc;
   float: right;
   margin: .8rem 1rem 0 0;
+  overflow: hidden;
 }
 .progress-bar > .progress {
   display: block;
   width: 70%;
   height: .4rem;
   background-color: #7ecaef;
-  border-radius: .2rem 0 0 .2rem;
 }
 .progress-bar > .progress.first {
   background-color: #ed6e52;
@@ -609,4 +605,48 @@ button {
 }
 .progress-bar > .progress.thr {
   background-color: #f29f4f;
+}
+#calendar .toolbar {
+  margin-bottom: .5rem;
+  text-align: justify;
+  -moz-text-align-last: justify;
+       text-align-last: justify;
+}
+#calendar .toolbar input,
+#calendar .toolbar select,
+#calendar .toolbar button {
+  line-height: 1.3rem;
+  height: 1.5rem;
+  vertical-align: top;
+}
+#calendar table {
+  border-spacing: 2px;
+  border-collapse: separate;
+  box-sizing: border-box;
+  font-size: .8rem;
+}
+#calendar table td {
+  border: .1rem solid transparent;
+}
+#calendar table > thead > tr {
+  border-top: 2px solid #a9cfec;
+  border-bottom: 1px solid #e1e1e1;
+  line-height: 2rem;
+}
+#calendar table > thead > tr > td {
+  width: 14.28571428571429%;
+}
+#calendar table > tbody > tr {
+  line-height: 1.4rem;
+  height: 4rem;
+  padding: .5rem 0;
+}
+#calendar table > tbody td:hover,
+#calendar table > tbody td.selected {
+  border: .1rem solid #f5c21d;
+}
+#calendar table > tbody td:nth-last-child(2) > .date,
+#calendar table > tbody td:last-child > .date,
+#calendar table > tbody td.festival > .lunar-cal {
+  color: red;
 }
