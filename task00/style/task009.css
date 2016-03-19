@@ -47,8 +47,6 @@ body {
   }
 }
 body {
-  min-width: 800px;
-  overflow: auto;
   position: relative;
   padding-top: 4rem;
 }
@@ -294,6 +292,7 @@ button {
 .btn-toolbar {
   border: 1px solid #aaa;
   border-radius: .1rem;
+  padding: 0 .2rem;
 }
 .container {
   min-width: 60rem;
