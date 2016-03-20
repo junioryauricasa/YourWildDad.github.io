@@ -343,15 +343,15 @@ button {
 .search-form .submit {
   line-height: 4rem;
 }
-.search-form .btn-submit {
+.btn-submit {
   background-color: #388ac1;
   color: #fff;
   border-color: transparent;
 }
-.search-form .btn-submit:hover {
+.btn-submit:hover {
   background-color: #327cad;
 }
-.search-form .btn-submit:active {
+.btn-submit:active {
   background-color: #2d6e99;
 }
 .time-line {
@@ -430,8 +430,7 @@ button {
 }
 .statistics > ul {
   text-align: justify;
-  -moz-text-align-last: justify;
-       text-align-last: justify;
+  text-align-last: justify;
 }
 .statistics .volume {
   display: inline-block;
@@ -444,8 +443,7 @@ button {
   height: 100%;
   float: left;
   text-align: left;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
   line-height: 2rem;
 }
 .statistics .volume .info > p:last-child {
@@ -456,6 +454,18 @@ button {
   height: 100%;
   width: 40%;
   float: right;
+}
+.statistics .volume .picture.green {
+  background-color: #43b29d;
+}
+.statistics .volume .picture.blue {
+  background-color: #398bc2;
+}
+.statistics .volume .picture.red {
+  background-color: #d04a36;
+}
+.statistics .volume .picture.yellow {
+  background-color: #e2cd47;
 }
 .statistics .volume.green,
 .statistics .volume.green > .picture {
@@ -608,8 +618,7 @@ button {
 #calendar .toolbar {
   margin-bottom: .5rem;
   text-align: justify;
-  -moz-text-align-last: justify;
-       text-align-last: justify;
+  text-align-last: justify;
 }
 #calendar .toolbar input,
 #calendar .toolbar select,
@@ -648,4 +657,33 @@ button {
 #calendar table > tbody td:last-child > .date,
 #calendar table > tbody td.festival > .lunar-cal {
   color: red;
+}
+#report table {
+  width: 80%;
+  margin: auto;
+  line-height: 2rem;
+}
+#report table td {
+  text-align: left;
+  border: none;
+  padding-left: 10px;
+}
+#report table .table-title {
+  color: #aaaaaa;
+}
+#report table .td-bottom-border {
+  border-bottom: .1rem solid #CDCDCD;
+}
+#report table .td-left-border {
+  border-left: .1rem solid #CDCDCD;
+}
+#report table input {
+  margin-right: 10px;
+}
+#report table .search-button {
+  width: 30%;
+  text-align: right;
+}
+#report table .NDA {
+  line-height: 50px;
 }
