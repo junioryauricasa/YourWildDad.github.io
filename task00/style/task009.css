@@ -343,15 +343,15 @@ button {
 .search-form .submit {
   line-height: 4rem;
 }
-.search-form .btn-submit {
+.btn-submit {
   background-color: #388ac1;
   color: #fff;
   border-color: transparent;
 }
-.search-form .btn-submit:hover {
+.btn-submit:hover {
   background-color: #327cad;
 }
-.search-form .btn-submit:active {
+.btn-submit:active {
   background-color: #2d6e99;
 }
 .time-line {
@@ -454,6 +454,18 @@ button {
   height: 100%;
   width: 40%;
   float: right;
+}
+.statistics .volume .picture.green {
+  background-color: #43b29d;
+}
+.statistics .volume .picture.blue {
+  background-color: #398bc2;
+}
+.statistics .volume .picture.red {
+  background-color: #d04a36;
+}
+.statistics .volume .picture.yellow {
+  background-color: #e2cd47;
 }
 .statistics .volume.green,
 .statistics .volume.green > .picture {
@@ -668,12 +680,10 @@ button {
 #report table input {
   margin-right: 10px;
 }
-#report table .NDA {
-  overflow: visible;
-}
 #report table .search-button {
   width: 30%;
+  text-align: right;
 }
-#report table .td-left {
-  width: 42%;
+#report table .NDA {
+  line-height: 50px;
 }

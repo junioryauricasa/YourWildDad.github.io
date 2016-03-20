@@ -1,5 +1,9 @@
 @base: rgba(33, 137, 191, 1);
 @sidebase: rgba(110, 128, 149, 1);
+@green:#43b29d;
+@blue:#398bc2;
+@red:#d04a36;
+@yellow:#e2cd47;
 html, body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
@@ -315,7 +319,9 @@ input, button {
   .submit {
     line-height: 4rem;
   }
-  .btn-submit {
+  
+}
+.btn-submit {
     background-color: rgb(56, 138, 193);
     color: #fff;
     border-color: transparent;
@@ -325,7 +331,6 @@ input, button {
     &:active {
       background-color: darken(rgb(56, 138, 193), 10%);
     }
-  }
 }
 .time-line {
   width: 85%;
@@ -424,17 +429,29 @@ input, button {
       width: 40%;
       float: right;
     }
+    .picture.green {
+      background-color: @green;
+    }
+    .picture.blue {
+      background-color: @blue;
+    }
+    .picture.red {
+      background-color: @red;
+    }
+    .picture.yellow {
+      background-color: @yellow;
+    }
     &.green, &.green > .picture {
-      border-color: #43b29d;
+      border-color: @green;
     }
     &.blue, &.blue > .picture {
-      border-color: #398bc2;
+      border-color: @blue;
     }
     &.red, &.red > .picture {
-      border-color: #d04a36;
+      border-color: @red;
     }
     &.yellow, &.yellow > .picture {
-      border-color: #e2cd47;
+      border-color: @yellow;
     }
     p {
       margin: 0
@@ -638,14 +655,15 @@ input, button {
     input{
       margin-right:10px;
     }
-    .NDA{
-      overflow: visible;
-    }
     .search-button{
       width:30%;
+      text-align: right;
     }
-    .td-left{
-      width:42%;
+    // .td-left{
+    //   width:42%;
+    // }
+    .NDA{
+      line-height:50px;
     }
   }
 }
