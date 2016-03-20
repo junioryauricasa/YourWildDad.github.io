@@ -430,8 +430,7 @@ button {
 }
 .statistics > ul {
   text-align: justify;
-  -moz-text-align-last: justify;
-       text-align-last: justify;
+  text-align-last: justify;
 }
 .statistics .volume {
   display: inline-block;
@@ -444,8 +443,7 @@ button {
   height: 100%;
   float: left;
   text-align: left;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
   line-height: 2rem;
 }
 .statistics .volume .info > p:last-child {
@@ -608,8 +606,7 @@ button {
 #calendar .toolbar {
   margin-bottom: .5rem;
   text-align: justify;
-  -moz-text-align-last: justify;
-       text-align-last: justify;
+  text-align-last: justify;
 }
 #calendar .toolbar input,
 #calendar .toolbar select,
@@ -648,4 +645,35 @@ button {
 #calendar table > tbody td:last-child > .date,
 #calendar table > tbody td.festival > .lunar-cal {
   color: red;
+}
+#report table {
+  width: 80%;
+  margin: auto;
+  line-height: 2rem;
+}
+#report table td {
+  text-align: left;
+  border: none;
+  padding-left: 10px;
+}
+#report table .table-title {
+  color: #aaaaaa;
+}
+#report table .td-bottom-border {
+  border-bottom: .1rem solid #CDCDCD;
+}
+#report table .td-left-border {
+  border-left: .1rem solid #CDCDCD;
+}
+#report table input {
+  margin-right: 10px;
+}
+#report table .NDA {
+  overflow: visible;
+}
+#report table .search-button {
+  width: 30%;
+}
+#report table .td-left {
+  width: 42%;
 }
