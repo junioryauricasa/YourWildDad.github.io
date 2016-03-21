@@ -12,3 +12,5 @@
 [任务四：定位和居中问题](http://yourwilddad.github.io/task00/task004)
 
 [任务五：零基础HTML及CSS编码（二）](http://yourwilddad.github.io/task00/task005)
+
+[任务七：实现常见的技术产品官网的页面架构及样式布局](http://yourwilddad.github.io/task00/task007.html)
