@@ -690,8 +690,11 @@ select::-ms-expand {
 #calendar table > tbody td.festival .lunar-cal {
   color: red;
 }
+#report > .panel-contents {
+  padding: 1rem 10%;
+  position: relative;
+}
 #report table {
-  width: 80%;
   margin: auto;
   line-height: 2rem;
 }
@@ -734,4 +737,11 @@ select::-ms-expand {
 }
 #report table .NDA {
   line-height: 50px;
+}
+#report .search {
+  padding: .5rem;
+  position: absolute;
+  bottom: 1rem;
+  width: 80%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }

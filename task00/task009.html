@@ -16,7 +16,7 @@
   <div class="function">
     <form class="input-group">
       <input class="input-btn" type="submit">
-      <input class="search" type="text" name="search">
+      <input class="search" type="text" name="search" title="搜索">
     </form>
     <div class="login">
       <button class="login-btn"><img src="images/login.png" alt="login"/>登陆</button>
@@ -316,32 +316,32 @@
                   <td colspan="2">该项目目前负责人是......</td>
                 </tr>
                 <tr>
-                  <td></br></td>
+                  <td></td>
                 </tr>
                 <tr>
-                  <td></br></td>
+                  <td></td>
                 </tr>
                 <tr>
-                  <td></br></td>
+                  <td></td>
                 </tr>
                 <tr>
-                  <td class="td-bottom-border" colspan="2"></br></td>
+                  <td class="td-bottom-border" colspan="2"></td>
                 </tr>
               </table>
-              <table>
-                <tr class="NDA">
-                  <td>
-                    <form>
+              <form action="" method="post" class="search">
+                <table>
+                  <tr class="NDA">
+                    <td>
                       <label class="checkbox" for="NDA" title="确认"></label>
                       <input type="checkbox" name="NDA" value="NDA" id="NDA">
                       <span>遵守保密协议</span>
-                    </form>
-                  </td>
-                  <td id="search-button">
-                    <button class="btn btn-submit" type="submit">搜索</button>
-                  </td>
-                </tr>
-              </table>
+                    </td>
+                    <td id="search-button">
+                      <button class="btn btn-submit" type="submit">搜索</button>
+                    </td>
+                  </tr>
+                </table>
+              </form>
             </div>
           </div>
         </figure>
@@ -351,14 +351,14 @@
           <figcaption class="title">日历</figcaption>
           <div class="panel-contents">
             <div class="toolbar">
-              <select name="year" id="year">
+              <select name="year" id="year" title="年">
                 <option value="2013">2013年</option>
                 <option value="2014">2014年</option>
                 <option value="2015">2015年</option>
                 <option value="2016" selected>2016年</option>
                 <option value="2016">2017年</option>
               </select>
-              <select name="month" id="month">
+              <select name="month" id="month" title="月">
                 <option value="1">1月</option>
                 <option value="2">2月</option>
                 <option value="3">3月</option>
@@ -372,7 +372,7 @@
                 <option value="11">11月</option>
                 <option value="12">12月</option>
               </select>
-              <select name="type">
+              <select name="type" title="日">
                 <option value="1" selected>标注日期</option>
               </select>
               <button class="btn btn-toolbar">返回今天</button>
