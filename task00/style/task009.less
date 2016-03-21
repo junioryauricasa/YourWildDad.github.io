@@ -644,11 +644,14 @@ select::-ms-expand {
         line-height: 1.4rem;
         height: 4rem;
       }
+      day {
+        border: .1rem solid transparent;
+      }
       td:hover > .day, td.selected > .day {
         border: .1rem solid #f5c21d;
       }
       td:hover > .day.empty, td.selected > .day.empty {
-        border: none;
+        border-color: transparent;
       }
       td:nth-last-child(2) .date, td:last-child .date, td.festival .lunar-cal {
         color: red;

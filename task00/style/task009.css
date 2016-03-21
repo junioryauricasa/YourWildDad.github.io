@@ -677,13 +677,16 @@ select::-ms-expand {
   line-height: 1.4rem;
   height: 4rem;
 }
+#calendar table > tbody day {
+  border: .1rem solid transparent;
+}
 #calendar table > tbody td:hover > .day,
 #calendar table > tbody td.selected > .day {
   border: .1rem solid #f5c21d;
 }
 #calendar table > tbody td:hover > .day.empty,
 #calendar table > tbody td.selected > .day.empty {
-  border: none;
+  border-color: transparent;
 }
 #calendar table > tbody td:nth-last-child(2) .date,
 #calendar table > tbody td:last-child .date,
