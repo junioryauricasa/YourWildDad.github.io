@@ -1,9 +1,9 @@
 @base: rgba(33, 137, 191, 1);
 @sidebase: rgba(110, 128, 149, 1);
-@green:#43b29d;
-@blue:#398bc2;
-@red:#d04a36;
-@yellow:#e2cd47;
+@green: #43b29d;
+@blue: #398bc2;
+@red: #d04a36;
+@yellow: #e2cd47;
 html, body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
@@ -47,6 +47,22 @@ a {
 }
 input, button {
   outline: none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent url(../images/select-black.png) no-repeat scroll 95% center;
+  border: 1px solid #aaa;
+  height: 1.7rem;
+  line-height: 1.5rem;
+  padding: 0 1rem 0 .5rem;
+  &:hover, &:active {
+    background: transparent url(../images/select-blue.png) no-repeat scroll 95% center;
+  }
+}
+select::-ms-expand {
+  display: none;
 }
 * {
   box-sizing: border-box;
@@ -214,6 +230,7 @@ input, button {
   color: rgba(176, 176, 176, 1);
   background-color: #fff;
   font-size: .9rem;
+  border-bottom: .1rem solid rgba(0, 0, 0, 0.1);
   li {
     float: left;
     margin-right: .5rem;
@@ -315,22 +332,23 @@ input, button {
     width: auto;
     margin-right: .5rem;
     height: 1.7rem;
+    border: .1rem solid #aaa;
   }
   .submit {
     line-height: 4rem;
   }
-  
+
 }
 .btn-submit {
-    background-color: rgb(56, 138, 193);
-    color: #fff;
-    border-color: transparent;
-    &:hover {
-      background-color: darken(rgb(56, 138, 193), 5%);
-    }
-    &:active {
-      background-color: darken(rgb(56, 138, 193), 10%);
-    }
+  background-color: rgb(56, 138, 193);
+  color: #fff;
+  border-color: transparent;
+  &:hover {
+    background-color: darken(rgb(56, 138, 193), 5%);
+  }
+  &:active {
+    background-color: darken(rgb(56, 138, 193), 10%);
+  }
 }
 .time-line {
   width: 85%;
@@ -429,29 +447,30 @@ input, button {
       width: 40%;
       float: right;
     }
-    .picture.green {
-      background-color: @green;
-    }
-    .picture.blue {
-      background-color: @blue;
-    }
-    .picture.red {
-      background-color: @red;
-    }
-    .picture.yellow {
-      background-color: @yellow;
-    }
-    &.green, &.green > .picture {
+
+    &.green {
       border-color: @green;
+      & > .picture {
+        background-color: @green;
+      }
     }
     &.blue, &.blue > .picture {
       border-color: @blue;
+      & > .picture {
+        background-color: @blue;
+      }
     }
     &.red, &.red > .picture {
       border-color: @red;
+      & > .picture {
+        background-color: @red;
+      }
     }
     &.yellow, &.yellow > .picture {
       border-color: @yellow;
+      & > .picture {
+        background-color: @yellow;
+      }
     }
     p {
       margin: 0
@@ -590,7 +609,6 @@ input, button {
   }
 }
 #calendar {
-
   .toolbar {
     margin-bottom: .5rem;
     text-align: justify;
@@ -602,12 +620,19 @@ input, button {
     }
   }
   table {
-    border-spacing: 2px;
-    border-collapse: separate;
-    box-sizing: border-box;
     font-size: .8rem;
     td {
-      border: .1rem solid transparent;
+      border: none;
+      padding: .15rem;
+    }
+    .date, .lunar-cal {
+      height: 1.8rem
+    }
+    .date {
+      line-height: 2.4rem;
+    }
+    .lunar-cal {
+      line-height: 1.2rem;
     }
     & > thead > tr {
       border-top: 2px solid #a9cfec;
@@ -621,49 +646,63 @@ input, button {
       & > tr {
         line-height: 1.4rem;
         height: 4rem;
-        padding: .5rem 0;
       }
-      td:hover, td.selected {
+      td:hover > .day, td.selected > .day {
         border: .1rem solid #f5c21d;
       }
-      td:nth-last-child(2) > .date, td:last-child > .date, td.festival > .lunar-cal {
+      td:hover > .day.empty, td.selected > .day.empty {
+        border: none;
+      }
+      td:nth-last-child(2) .date, td:last-child .date, td.festival .lunar-cal {
         color: red;
       }
     }
   }
-
 }
 #report {
   table {
-    width:80%;
-    margin:auto;
+    width: 80%;
+    margin: auto;
     line-height: 2rem;
     td {
-      text-align:left;
-      border:none;
-      padding-left:10px;
-      }
-    .table-title{
+      text-align: left;
+      border: none;
+      padding-left: 10px;
+      cursor: default;
+    }
+    .table-title {
       color: #aaaaaa;
     }
-    .td-bottom-border{
+    .td-bottom-border {
       border-bottom: .1rem solid #CDCDCD;
     }
-    .td-left-border{
+    .td-left-border {
       border-left: .1rem solid #CDCDCD;
     }
-    input{
-      margin-right:10px;
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 1rem;
+      width: 1rem;
+      display: inline-block;
+      vertical-align: text-top;
+      cursor: pointer;
+      margin-right: .5rem;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background-color: transparent;
+      &:checked {
+        background: url("../images/checkbox.jpg") no-repeat center;
+        background-size: cover;
+        border: none;
+      }
     }
-    .search-button{
-      width:30%;
+    .search-button {
+      width: 30%;
       text-align: right;
     }
-    // .td-left{
-    //   width:42%;
-    // }
-    .NDA{
-      line-height:50px;
+    .NDA {
+      line-height: 50px;
     }
   }
 }

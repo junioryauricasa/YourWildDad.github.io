@@ -65,6 +65,23 @@ input,
 button {
   outline: none;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent url(../images/select-black.png) no-repeat scroll 95% center;
+  border: 1px solid #aaa;
+  height: 1.7rem;
+  line-height: 1.5rem;
+  padding: 0 1rem 0 .5rem;
+}
+select:hover,
+select:active {
+  background: transparent url(../images/select-blue.png) no-repeat scroll 95% center;
+}
+select::-ms-expand {
+  display: none;
+}
 * {
   box-sizing: border-box;
 }
@@ -236,6 +253,7 @@ button {
   color: #b0b0b0;
   background-color: #fff;
   font-size: .9rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
 }
 .breadcrumb-nav li {
   float: left;
@@ -339,6 +357,7 @@ button {
   width: auto;
   margin-right: .5rem;
   height: 1.7rem;
+  border: .1rem solid #aaa;
 }
 .search-form .submit {
   line-height: 4rem;
@@ -430,7 +449,8 @@ button {
 }
 .statistics > ul {
   text-align: justify;
-  text-align-last: justify;
+  -moz-text-align-last: justify;
+       text-align-last: justify;
 }
 .statistics .volume {
   display: inline-block;
@@ -443,7 +463,8 @@ button {
   height: 100%;
   float: left;
   text-align: left;
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
   line-height: 2rem;
 }
 .statistics .volume .info > p:last-child {
@@ -455,33 +476,35 @@ button {
   width: 40%;
   float: right;
 }
-.statistics .volume .picture.green {
-  background-color: #43b29d;
-}
-.statistics .volume .picture.blue {
-  background-color: #398bc2;
-}
-.statistics .volume .picture.red {
-  background-color: #d04a36;
-}
-.statistics .volume .picture.yellow {
-  background-color: #e2cd47;
-}
-.statistics .volume.green,
-.statistics .volume.green > .picture {
+.statistics .volume.green {
   border-color: #43b29d;
+}
+.statistics .volume.green > .picture {
+  background-color: #43b29d;
 }
 .statistics .volume.blue,
 .statistics .volume.blue > .picture {
   border-color: #398bc2;
 }
+.statistics .volume.blue > .picture,
+.statistics .volume.blue > .picture > .picture {
+  background-color: #398bc2;
+}
 .statistics .volume.red,
 .statistics .volume.red > .picture {
   border-color: #d04a36;
 }
+.statistics .volume.red > .picture,
+.statistics .volume.red > .picture > .picture {
+  background-color: #d04a36;
+}
 .statistics .volume.yellow,
 .statistics .volume.yellow > .picture {
   border-color: #e2cd47;
+}
+.statistics .volume.yellow > .picture,
+.statistics .volume.yellow > .picture > .picture {
+  background-color: #e2cd47;
 }
 .statistics .volume p {
   margin: 0;
@@ -618,7 +641,8 @@ button {
 #calendar .toolbar {
   margin-bottom: .5rem;
   text-align: justify;
-  text-align-last: justify;
+  -moz-text-align-last: justify;
+       text-align-last: justify;
 }
 #calendar .toolbar input,
 #calendar .toolbar select,
@@ -628,13 +652,21 @@ button {
   vertical-align: top;
 }
 #calendar table {
-  border-spacing: 2px;
-  border-collapse: separate;
-  box-sizing: border-box;
   font-size: .8rem;
 }
 #calendar table td {
-  border: .1rem solid transparent;
+  border: none;
+  padding: .15rem;
+}
+#calendar table .date,
+#calendar table .lunar-cal {
+  height: 1.8rem;
+}
+#calendar table .date {
+  line-height: 2.4rem;
+}
+#calendar table .lunar-cal {
+  line-height: 1.2rem;
 }
 #calendar table > thead > tr {
   border-top: 2px solid #a9cfec;
@@ -647,15 +679,18 @@ button {
 #calendar table > tbody > tr {
   line-height: 1.4rem;
   height: 4rem;
-  padding: .5rem 0;
 }
-#calendar table > tbody td:hover,
-#calendar table > tbody td.selected {
+#calendar table > tbody td:hover > .day,
+#calendar table > tbody td.selected > .day {
   border: .1rem solid #f5c21d;
 }
-#calendar table > tbody td:nth-last-child(2) > .date,
-#calendar table > tbody td:last-child > .date,
-#calendar table > tbody td.festival > .lunar-cal {
+#calendar table > tbody td:hover > .day.empty,
+#calendar table > tbody td.selected > .day.empty {
+  border: none;
+}
+#calendar table > tbody td:nth-last-child(2) .date,
+#calendar table > tbody td:last-child .date,
+#calendar table > tbody td.festival .lunar-cal {
   color: red;
 }
 #report table {
@@ -667,6 +702,7 @@ button {
   text-align: left;
   border: none;
   padding-left: 10px;
+  cursor: default;
 }
 #report table .table-title {
   color: #aaaaaa;
@@ -677,8 +713,23 @@ button {
 #report table .td-left-border {
   border-left: .1rem solid #CDCDCD;
 }
-#report table input {
-  margin-right: 10px;
+#report table input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  vertical-align: text-top;
+  cursor: pointer;
+  margin-right: .5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+#report table input[type="checkbox"]:checked {
+  background: url("../images/checkbox.jpg") no-repeat center;
+  background-size: cover;
+  border: none;
 }
 #report table .search-button {
   width: 30%;
