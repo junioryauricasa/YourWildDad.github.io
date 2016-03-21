@@ -281,6 +281,7 @@ select::-ms-expand {
 }
 .card {
   background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 .tab {
@@ -511,7 +512,7 @@ select::-ms-expand {
 }
 .panel {
   border-radius: .5rem;
-  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   height: 30rem;
   padding-top: 3rem;
@@ -555,11 +556,11 @@ select::-ms-expand {
 .tabs {
   height: 100%;
   width: 100%;
-  padding-top: 2.5rem;
+  padding-top: 2.4rem;
   position: relative;
 }
 .tabs > .tab-nav-list {
-  line-height: 2.5rem;
+  line-height: 2.3rem;
   width: 100%;
   position: absolute;
   top: 1px;
@@ -572,9 +573,7 @@ select::-ms-expand {
 .tabs > .tab-nav-list a {
   text-align: center;
   padding: 0 1.5rem;
-  height: 2.3rem;
-  border: .1rem solid transparent;
-  border-bottom-color: #cbcbcb;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
   border-radius: .4rem .4rem 0 0;
   background-color: #ededf0;
 }
@@ -584,7 +583,7 @@ select::-ms-expand {
 .tabs > .tab-nav-list a.active,
 .tabs > .tab-nav-list a.active:hover {
   background-color: #fff;
-  border-color: #cbcbcb #cbcbcb #fff #cbcbcb;
+  border-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2) #fff;
 }
 .tabs .tab-list,
 .tabs .tab-content {
@@ -592,10 +591,9 @@ select::-ms-expand {
   height: 100%;
 }
 .tabs .tab-list {
-  border: 1px solid #cbcbcb;
+  border: .05rem solid #cbcbcb;
   border-radius: 0 0 .4rem .4rem;
   overflow: hidden;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 .tabs .tab-content {
   padding: 1rem;
