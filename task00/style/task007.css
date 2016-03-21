@@ -16,7 +16,7 @@ input,
 button {
     border: 0;
 }
-button,
+button
 {
     cursor: pointer;
 }
@@ -31,12 +31,12 @@ a,
 a:link,
 a:visited,
 a:hover,
-a:active { 
+a:active {
     color:#333;
     text-decoration:none
 }
 ul,
-li { 
+li {
     list-style:none;
 }
 header ul li {
@@ -203,9 +203,8 @@ section.city {
     appearance:none;
     -moz-appearance:none;
     -webkit-appearance:none;
-    background: url(../images/select-bg.png) no-repeat scroll right 10px center transparent;
-    background-color: #fff;
-    padding-right: 20px;
+  background: #fff url(../images/select-bg.png) no-repeat scroll right 10px center;
+  padding-right: 20px;
     padding-left: 15px;
     color: #aba6a5;
 }
@@ -217,7 +216,7 @@ section.city {
     color: #fff;
 }
 .sub-btn {
-    background-color: #FD323D;
+    background-color: #bf4f49;
     color: #fff;
     font-size: 1rem;
     letter-spacing: 25px;
@@ -284,7 +283,7 @@ section.action .picture {
     color: #fff;
 }
 .slide-inner h1 {
-    
+
     font-size: 50px;
     font-weight: 200;
 }
@@ -311,7 +310,7 @@ section.action .picture {
 .slide-desc span {
     position: relative;
     padding-left: 20px;
-    font-family: "Helvetica Neue", Helvetica;
+  font-family: "Helvetica Neue", Helvetica, serif;
     font-size: 22px;
     color: #FD323D;
 }
@@ -322,7 +321,7 @@ section.action .picture {
     height: 28px;
     position: absolute;
     background-color: #323333;
-    top: 0px;
+    top: 0;
     left: 8px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -387,7 +386,7 @@ section.action .picture {
 .time-img {
     float: right;
     width: 34%;
-    
+
 }
 .time-img img{
     height: 520px;
