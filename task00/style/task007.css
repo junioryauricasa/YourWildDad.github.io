@@ -232,23 +232,29 @@ section.action .pictures {
 section.action .picture {
   float: left;
   width: 24%;
-  padding: 0 60px;
+  padding: 0 30px;
   box-sizing: border-box;
 }
 .picture img {
   background-color: #fff;
   padding: 10px;
   border: 1px solid #e1dedc;
+  width: 100%;
+  box-sizing: border-box;
 }
 .picture h3 {
   margin-top: 10px;
   font-size: 15px;
+  width: 100%;
 }
 .picture h3.shanghai {
   font-size: 25px;
   font-weight: 200;
   text-align: justify;
   text-align-last: justify;
+  width: 100%;
+  max-width: 170px;
+  margin: 0 auto;
 }
 .picture p {
   color: #A2A2A2;
