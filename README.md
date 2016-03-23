@@ -16,3 +16,6 @@
 [任务七：实现常见的技术产品官网的页面架构及样式布局](http://yourwilddad.github.io/task00/task007)
 
 [任务九：使用HTML/CSS实现一个复杂页面](http://yourwilddad.github.io/task00/task009)
+
+####第二批任务：
+[任务十八：基础JavaScript练习（一）](http://yourwilddad.github.io/task00/task018)
