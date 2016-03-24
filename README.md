@@ -18,4 +18,4 @@
 [任务九：使用HTML/CSS实现一个复杂页面](http://yourwilddad.github.io/task00/task009)
 
 ####第二批任务：
-[任务十八：基础JavaScript练习（一）](http://yourwilddad.github.io/task00/task018)
+[任务十八：基础JavaScript练习（一）](http://yourwilddad.github.io/task01/task018)
