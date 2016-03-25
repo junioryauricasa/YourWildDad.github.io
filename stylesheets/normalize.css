@@ -29,6 +29,11 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 article,
 aside,

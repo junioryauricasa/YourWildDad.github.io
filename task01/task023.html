@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务二十三：JavaScript和树（二）</title>
+    <link rel="stylesheet" href="../stylesheets/normalize.css">
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            text-align: center;
+        }
+
+        div {
+            height: calc(100% - 30px);
+            max-height: 300px;
+            margin: 15px 0 0 15px;
+            position: relative;
+            float: left;
+            border: 1px solid;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        #root {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            margin: 50px auto 0;
+        }
+    </style>
+</head>
+<body>
+<h1>任务二十二：JavaScript和树（一）</h1>
+<div id="root">
+    root
+    <div>
+        sub-1
+        <div>
+            sub-2
+            <div>sub-3</div>
+            <div>sub-4</div>
+            <div>sub-5</div>
+        </div>
+        <div>
+            sub-6
+            <div>sub-7</div>
+            <div>sub-8</div>
+        </div>
+        <div>
+            sub-9
+            <div>sub-10</div>
+            <div>sub-11
+                <div>sub-12</div>
+            </div>
+        </div>
+        <div>sub-13</div>
+    </div>
+    <div>sub-14
+        <div>sub-15
+            <div>sub-16</div>
+            <div>sub-17</div>
+            <div>sub-18
+                <div>sub-19</div>
+                <div>sub-20</div>
+            </div>
+            <div>sub-21
+                <div>sub-22</div>
+                <div>sub-23</div>
+            </div>
+        </div>
+        <div>sub-24
+            <div>sub-25</div>
+            <div>sub-26</div>
+        </div>
+    </div>
+</div>
+<p>
+    <button onclick="traversal('pre')">前序遍历</button>
+    <button onclick="traversal('in')">中序遍历</button>
+    <button onclick="traversal('post')">倒序遍历</button>
+    <label for="set-time">闪烁间隔</label>
+    <input id="set-time" type="number" value="1000">ms
+</p>
+<script src="js/task023.js"></script>
+</body>
+</html>
