@@ -13,7 +13,7 @@ var changeBkColor = function (divList) {
             clearInterval(interval);
             divList[i - 1].style.backgroundColor = '#fff';
         }
-    }, 500)
+    }, document.getElementById('set-time').value)
 };
 var traversal = function (type) {
     var divList = [];
