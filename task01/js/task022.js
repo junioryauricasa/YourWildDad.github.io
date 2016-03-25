@@ -17,7 +17,7 @@ var changeBkColor = function (divList) {
 };
 var traversal = function (type) {
     var divList = [];
-    clearInterval(interval);
+    reset();
     var root = document.getElementById("root");
     switch (type) {
         case 'pre':
@@ -54,5 +54,12 @@ var post_traversal = function (node, divList) {
         post_traversal(node.firstElementChild, divList);
         post_traversal(node.lastElementChild, divList);
         divList.push(node);
+    }
+};
+var reset = function () {
+    clearInterval(interval);
+    var divs = document.getElementsByTagName('div');
+    for (var i = divs.length - 1; i >= 0; i--) {
+        divs[i].style.backgroundColor = '#fff';
     }
 };
