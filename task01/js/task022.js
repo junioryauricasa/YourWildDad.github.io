@@ -21,7 +21,7 @@ var traversal = function (type) {
     switch (type) {
         case 'pre':
             divList.push(root);
-            pre_traversal(root.childNodes, divList);
+            pre_traversal(root.children, divList);
             break;
         case 'in':
             in_traversal(root, divList);
@@ -37,7 +37,7 @@ var pre_traversal = function (elementList, divList) {
     var length = elementList.length;
     for (var i = 0; i < length; i++) {
         divList.push(elementList[i]);
-        pre_traversal(elementList[i].childNodes, divList);
+        pre_traversal(elementList[i].children, divList);
     }
 };
 
