@@ -17,6 +17,7 @@ var changeBkColor = function (divList) {
 };
 var traversal = function (type) {
     var divList = [];
+    clearInterval(interval);
     var root = document.getElementById("root");
     switch (type) {
         case 'pre':
