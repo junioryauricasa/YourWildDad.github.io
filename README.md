@@ -19,3 +19,5 @@
 
 ####第二批任务：
 [任务十八：基础JavaScript练习（一）](http://yourwilddad.github.io/task01/task018)
+
+[任务二十二：JavaScript和树（一）](http://yourwilddad.github.io/task01/task022)
