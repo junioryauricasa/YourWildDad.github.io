@@ -13,24 +13,21 @@ var changeBkColor = function (divList) {
             clearInterval(interval);
             divList[i - 1].style.backgroundColor = '#fff';
         }
-    }, 100)
+    }, 500)
 };
 var traversal = function (type) {
     var divList = [];
     var root = document.getElementById("root");
-    var child_1 = document.getElementById("child-1");
     switch (type) {
         case 'pre':
             divList.push(root);
             pre_traversal(root.childNodes, divList);
             break;
         case 'in':
-            divList.push(child_1);
-            in_traversal(child_1, divList);
+            in_traversal(root, divList);
             break;
         case 'post':
-            divList.push(child_1);
-            post_traversal(child_1, divList);
+            post_traversal(root, divList);
             break;
         default:
     }
@@ -46,11 +43,15 @@ var pre_traversal = function (elementList, divList) {
 
 var in_traversal = function (node, divList) {
     if (node) {
+        in_traversal(node.firstElementChild, divList);
         divList.push(node);
-        divList.push(node.parentNode);
-        in_traversal(node.parentNode.lastElementNode, divList);
+        in_traversal(node.lastElementChild, divList);
     }
 };
-var post_traversal = function () {
-
+var post_traversal = function (node, divList) {
+    if (node) {
+        post_traversal(node.firstElementChild, divList);
+        post_traversal(node.lastElementChild, divList);
+        divList.push(node);
+    }
 };
