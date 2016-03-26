@@ -144,8 +144,13 @@
         return divArr;
     }
 
-    function changeColor() {
-
+    function changeColorToRed(color) {
+        var div = box.getElementsByTagName('div');
+        for (var i =0; i< div.length; i++) {
+            if (div[i].style.backgroundColor == color) {
+                div[i].style.backgroundColor = 'red';
+            }
+        }
     }
 
     EventUtil.addHandler(button[5], 'click', function () {
@@ -169,11 +174,20 @@
                 while (i != j) {
                     var div = box.getElementsByTagName('div');
                     //动画应该在这里
+                    //var timer = null;
                     while (numArr[j] >= temp && i < j ) {
+                        //alert(1);
+                        alert(1);
+                        changeColorToRed('blue');
                         j--;
+                        div[j].style.backgroundColor = 'blue';  
                     }
+                    
                     while (numArr[i] <= temp && i < j) {
+                        alert(2);
+                        changeColorToRed('yellow');
                         i++;
+                        div[i].style.backgroundColor = 'yellow';
                     }
                     if (i < j) {
                         var t = numArr[i];
