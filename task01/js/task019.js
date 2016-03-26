@@ -1,7 +1,7 @@
 /**
  * Created by Stoneworld on 2016/3/24.
  */
-(function() {
+(function () {
     //兼容浏览器
     var EventUtil = {
         addHandler: function (element, type, handler) {
@@ -46,7 +46,7 @@
     //右侧进入 type = 0;左侧进入
     function addDiv(num, type) {
         var newItem = document.createElement('div');
-        newItem.style.height = num*4 + "px";
+        newItem.style.height = num * 4 + "px";
         newItem.title = num;
         if (type == 0) {
             box.appendChild(newItem);
@@ -72,9 +72,10 @@
         }
 
     }
+
     //验证是否为数字
     function checkValue(number) {
-        if(!(/^\d+$/.test(number))){
+        if (!(/^\d+$/.test(number))) {
             alert("请输入正确的整数！");
             return false;
         }
@@ -84,6 +85,7 @@
         }
         return true;
     }
+
     //左侧进入
     EventUtil.addHandler(button[0], 'click', function () {
         var inputValue = document.getElementById('number').value;
@@ -109,7 +111,7 @@
     //点击元素删除
     EventUtil.addHandler(container, 'click', function (event) {
         var target = EventUtil.getTarget(event);//获取被事件触发的元素。
-        if(target.tagName == "DIV") {
+        if (target.tagName == "DIV") {
             var number = target.title;
             container.removeChild(target);
             alert(number);
@@ -117,9 +119,9 @@
     });
     /**产生随机数 **/
     function randomArr(total) {
-        var arr=[];
-        for(var i=0;i<total;i++){
-            arr.push(Math.floor(Math.random()*90)+10);
+        var arr = [];
+        for (var i = 0; i < total; i++) {
+            arr.push(Math.floor(Math.random() * 90) + 10);
         }
         return arr;
     }
@@ -129,7 +131,7 @@
         var arr = randomArr(50);
         for (var i = 0; i < arr.length; i++) {
             var newItem = document.createElement('div');
-            newItem.style.height = arr[i]*4 + "px";
+            newItem.style.height = arr[i] * 4 + "px";
             newItem.title = arr[i];
             box.appendChild(newItem);
         }
@@ -159,17 +161,18 @@
     //var numArr = [6, 3, 5, 7, 6, 8, 6];
     function quickSort(numArr) {
         var numArr = numArr;
+
         function sort(left, right) {
             var i, j, temp;
             i = left;
             j = right;
             temp = numArr[left];
             //var time = setInterval(run, 150)
-            if ((right-left) > 0) {
+            if ((right - left) > 0) {
                 while (i != j) {
                     var div = box.getElementsByTagName('div');
                     //动画应该在这里
-                    while (numArr[j] >= temp && i < j ) {
+                    while (numArr[j] >= temp && i < j) {
                         j--;
                     }
                     while (numArr[i] <= temp && i < j) {
@@ -178,29 +181,36 @@
                     if (i < j) {
                         var t = numArr[i];
                         numArr[i] = numArr[j];
-                        div[i].style.height = numArr[j]*4 + "px";
+                        div[i].style.height = numArr[j] * 4 + "px";
                         div[i].title = numArr[j];
                         numArr[j] = t;
-                        div[j].style.height = t*4 + "px";
+                        div[j].style.height = t * 4 + "px";
                         div[j].title = t;
 
                     }
                 }
 
                 numArr[left] = numArr[i];
-                div[left].style.height = numArr[i]*4 + "px";
+                div[left].style.height = numArr[i] * 4 + "px";
                 div[left].title = numArr[i];
                 numArr[i] = temp;
-                div[i].style.height = temp*4 + "px";
+                div[i].style.height = temp * 4 + "px";
                 div[i].title = temp;
-                sort(left,i);//左边递归的过程
-                sort(i+1,right);//右边递归的过程
+                setTimeout(function () {
+                    sort(left, i);//左边递归的过程
+                    setTimeout(function () {
+                        sort(i + 1, right);//右边递归的过程
+                    }, 200);
+                }, 200);
+
             }
         }
+
         var num = numArr.length - 1;
         sort(0, num);
         return numArr;
     }
+
     /*var aa = quickSort(numArr);
-    console.log(aa);*/
+     console.log(aa);*/
 })()
