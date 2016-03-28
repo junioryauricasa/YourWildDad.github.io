@@ -1,7 +1,8 @@
+var interval; // 缓存定时器ID
 /**
- * Created by YourWildDad on 2016/3/24.
+ * 改变队列里div的颜色
+ * @param divList div列表
  */
-var interval;
 var changeBkColor = function (divList) {
     var length = divList.length, i = 0;
     divList[i++].style.backgroundColor = "blue";
@@ -15,6 +16,10 @@ var changeBkColor = function (divList) {
         }
     }, document.getElementById('set-time').value)
 };
+/**
+ * 按钮点击事件
+ * @param type 点击了哪个按钮
+ */
 var traversal = function (type) {
     var divList = [];
     reset();
@@ -34,6 +39,11 @@ var traversal = function (type) {
     }
     changeBkColor(divList);
 };
+/**
+ * 前序遍历
+ * @param elementList 父节点
+ * @param divList 遍历列表
+ */
 var pre_traversal = function (elementList, divList) {
     var length = elementList.length;
     for (var i = 0; i < length; i++) {
@@ -42,6 +52,11 @@ var pre_traversal = function (elementList, divList) {
     }
 };
 
+/**
+ * 中序遍历
+ * @param node 父节点
+ * @param divList 遍历列表
+ */
 var in_traversal = function (node, divList) {
     if (node) {
         in_traversal(node.firstElementChild, divList);
@@ -49,6 +64,11 @@ var in_traversal = function (node, divList) {
         in_traversal(node.lastElementChild, divList);
     }
 };
+/**
+ * 后序遍历
+ * @param node 父节点
+ * @param divList 遍历列表
+ */
 var post_traversal = function (node, divList) {
     if (node) {
         post_traversal(node.firstElementChild, divList);
@@ -56,6 +76,9 @@ var post_traversal = function (node, divList) {
         divList.push(node);
     }
 };
+/**
+ * 重置全部
+ */
 var reset = function () {
     clearInterval(interval);
     var divs = document.getElementsByTagName('div');
